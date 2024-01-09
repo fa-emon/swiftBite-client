@@ -58,7 +58,7 @@ const NavBar = () => {
     return (
         <>
             <Banner className='relative'></Banner>
-            <div className="navbar opacity-95 text-white bg-[#0B1315] absolute z-50 top-0">
+            <div className="navbar opacity-95 text-white bg-[#0b1315c9] absolute z-50 top-0">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
