@@ -1,12 +1,12 @@
 import { SiCodechef } from "react-icons/si";
 import { BiSolidSushi } from "react-icons/bi";
 import { Button } from "@chakra-ui/react";
-import { GiBamboo } from "react-icons/gi";
+import { GiFruitBowl } from "react-icons/gi";
 import { GiDoubleFish } from "react-icons/gi";
 
 const Services = () => {
     return (
-        <div className="w-full flex px-10 mb-32">
+        <div className="w-full flex px-10">
             <div className="w-1/2 grid grid-cols-2 gap-6">
                 <div>
                     <div className="border-[#C9AB81] border-4 rounded-full w-32 h-32 flex items-center justify-center">
@@ -36,7 +36,7 @@ const Services = () => {
 
                 <div>
                     <div className="border-[#C9AB81] border-4 rounded-full w-32 h-32 flex items-center justify-center">
-                        <span className="text-[#C9AB81] text-5xl"><GiBamboo></GiBamboo></span>
+                        <span className="text-[#C9AB81] text-5xl"><GiFruitBowl></GiFruitBowl></span>
                     </div>
                     <div>
                         <h2 className="text-white heading-font text-xl tracking-widest my-4">Fresh Products</h2>
