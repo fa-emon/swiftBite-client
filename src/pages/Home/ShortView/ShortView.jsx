@@ -2,7 +2,7 @@ import 'animate.css';
 
 const ShortView = () => {
     return (
-        <div className="w-full mt-10 mb-20">
+        <div className="w-full mt-16 mb-32">
             <div className="animate__animated animate__fadeInLeft">
                 <img className="w-32 h-1/5 mx-auto" src="https://i.ibb.co/GpBmVd4/1.png" alt="" />
             </div>

@@ -4,7 +4,7 @@ import './About.css'
 
 const About = () => {
     return (
-        <div className="w-full flex justify-between px-10">
+        <div className="w-full flex justify-between px-10 mb-32">
             <div className="w-1/2">
                 <h2 className="small-font text-[#C9AB81] text-4xl tracking-in-expand">About Us</h2>
                 <hr className='border-t-2 border-[#C9AB81] w-[115px]' />
@@ -22,7 +22,7 @@ const About = () => {
                 <img className="ms-32 opacity-95 animate__animated animate__fadeInRight kenburns-top" style={{ height: '85vh', objectFit: 'contain', width: '100%' }} src="https://i.ibb.co/98cZtkj/pexels-photo-10757080.jpg" alt="" />
 
                 {/* here, i want use rotate animation */}
-                <img className="rounded-full rotate-center shadow-2xl border-4 border-solid border-zinc-200 animate__animated animate__fadeInLeft absolute top-52" style={{ height: '50vh', objectFit: 'cover', width: '50%' }} src="https://i.ibb.co/SyD41fv/pexels-photo-230484.jpg" alt="" />
+                <img className="rounded-full rotate-center shadow-2xl border-4 border-solid border-[#C9AB81] animate__animated animate__fadeInLeft absolute top-52 w-80 h-80 object-cover" src="https://i.ibb.co/SyD41fv/pexels-photo-230484.jpg" alt="" />
             </div>
         </div>
     );
