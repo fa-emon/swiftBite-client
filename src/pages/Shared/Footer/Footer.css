@@ -1,0 +1,23 @@
+/* heartbeat.css */
+
+@keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.3);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+.heartbeat {
+    animation: heartbeat 2s ease-in-out infinite both;
+}

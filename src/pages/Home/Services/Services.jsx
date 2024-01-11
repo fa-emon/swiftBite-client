@@ -3,6 +3,7 @@ import { BiSolidSushi } from "react-icons/bi";
 import { Button } from "@chakra-ui/react";
 import { GiFruitBowl } from "react-icons/gi";
 import { GiDoubleFish } from "react-icons/gi";
+import './Services.css'
 
 const Services = () => {
     return (
@@ -10,7 +11,7 @@ const Services = () => {
             <div className="w-1/2 grid grid-cols-2 gap-6">
                 <div>
                     <div className="border-[#C9AB81] border-4 rounded-full w-32 h-32 flex items-center justify-center">
-                        <span className="text-[#C9AB81] text-7xl"><SiCodechef></SiCodechef></span>
+                        <span className="text-[#C9AB81] text-7xl tracking-out-contract"><SiCodechef></SiCodechef></span>
                     </div>
                     <div>
                         <h2 className="text-white heading-font text-xl tracking-widest my-4">Skilled Chefs</h2>
@@ -23,7 +24,7 @@ const Services = () => {
 
                 <div>
                     <div className="border-[#C9AB81] border-4 rounded-full w-32 h-32 flex items-center justify-center">
-                        <span className="text-[#C9AB81] text-5xl"><BiSolidSushi></BiSolidSushi></span>
+                        <span className="text-[#C9AB81] text-5xl bounce-top"><BiSolidSushi></BiSolidSushi></span>
                     </div>
                     <div>
                         <h2 className="text-white heading-font text-xl tracking-widest my-4">Sushi Special</h2>
@@ -36,7 +37,7 @@ const Services = () => {
 
                 <div>
                     <div className="border-[#C9AB81] border-4 rounded-full w-32 h-32 flex items-center justify-center">
-                        <span className="text-[#C9AB81] text-5xl"><GiFruitBowl></GiFruitBowl></span>
+                        <span className="text-[#C9AB81] text-5xl bounce-in-top"><GiFruitBowl></GiFruitBowl></span>
                     </div>
                     <div>
                         <h2 className="text-white heading-font text-xl tracking-widest my-4">Fresh Products</h2>
@@ -49,7 +50,7 @@ const Services = () => {
 
                 <div>
                     <div className="border-[#C9AB81] border-4 rounded-full w-32 h-32 flex items-center justify-center">
-                        <span className="text-[#C9AB81] text-5xl"><GiDoubleFish></GiDoubleFish></span>
+                        <span className="text-[#C9AB81] text-5xl shake-horizontal "><GiDoubleFish></GiDoubleFish></span>
                     </div>
                     <div>
                         <h2 className="text-white heading-font text-xl tracking-widest my-4">Unique Tastes</h2>

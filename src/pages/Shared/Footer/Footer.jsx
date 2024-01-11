@@ -1,4 +1,5 @@
 import { MdOutlinePhone } from "react-icons/md";
+import './Footer.css'
 
 const Footer = () => {
 
@@ -19,7 +20,7 @@ const Footer = () => {
 
             <div className="w-1/2">
                 <div className="flex items-center justify-center">
-                    <span className="text-[#C9AB81] text-2xl"><MdOutlinePhone></MdOutlinePhone></span>
+                    <span className="text-[#C9AB81] text-2xl heartbeat"><MdOutlinePhone></MdOutlinePhone></span>
                     <h2 className="small-font ms-6 text-4xl text-[#C9AB81]">Contact Us</h2>
                 </div>
                 <div className="text-center mt-6">
