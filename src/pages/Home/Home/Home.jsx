@@ -1,7 +1,8 @@
 import About from "../About/About";
+import DisplayFood from "../DisplayFood/DisplayFood";
+import Reservations from "../Reservations/Reservations";
 import Services from "../Services/Services";
 import ShortView from "../ShortView/ShortView";
-
 
 
 const Home = () => {
@@ -10,6 +11,8 @@ const Home = () => {
             <ShortView></ShortView>
             <About></About>
             <Services></Services>
+            <Reservations></Reservations>
+            <DisplayFood></DisplayFood>
         </div>
     );
 };
