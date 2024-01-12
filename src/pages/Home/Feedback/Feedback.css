@@ -1,0 +1,32 @@
+/* Feedback.css */
+
+@keyframes rotateRight {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  
+  @keyframes rotateLeft {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-180deg);
+    }
+  }
+  
+  .feedback-image {
+    transition: transform 1.5s ease; /* Increase transition duration for more smoothness */
+  }
+  
+  .feedback-image:hover {
+    animation: rotateRight 1.5s forwards; /* Increase animation duration for a slower rotation */
+  }
+  
+  .feedback-image:hover:hover {
+    animation: rotateLeft 1.5s forwards; /* Increase animation duration for a slower rotation */
+  }
+  
