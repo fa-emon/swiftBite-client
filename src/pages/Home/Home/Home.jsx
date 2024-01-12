@@ -1,4 +1,5 @@
 import About from "../About/About";
+import Blog from "../Blog/Blog";
 import DisplayFood from "../DisplayFood/DisplayFood";
 import Feedback from "../Feedback/Feedback";
 import Reservations from "../Reservations/Reservations";
@@ -15,6 +16,7 @@ const Home = () => {
             <Reservations></Reservations>
             <DisplayFood></DisplayFood>
             <Feedback></Feedback>
+            <Blog></Blog>
         </div>
     );
 };
