@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { GiSpoon } from "react-icons/gi";
-import Banner from '../../Home/Banner/Banner';
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -35,7 +34,7 @@ const NavBar = () => {
             user ?
                 <>
                     {
-                        user && isAdmin ?
+                        user?
                             <>
                                 <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={isAdmin ? '/dashboard/adminHome' : '/dashboard/userHome'}>Dashboard</Link></li>
                                 <li><button onClick={handleLogOut} className="btn btn-ghost btn-sm heading-font hover:bg-[#C9AB81] hover:text-black tracking-wide">LogOut</button></li>
@@ -57,8 +56,7 @@ const NavBar = () => {
 
     return (
         <>
-            <Banner className='relative'></Banner>
-            <div className="navbar opacity-95 text-white bg-[#0b1315c9] absolute z-50 top-0">
+            <div className="navbar opacity-95 text-white bg-[#0b1315c9] fixed z-10">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

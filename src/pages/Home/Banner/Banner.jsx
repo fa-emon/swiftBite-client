@@ -43,7 +43,7 @@ const Banner = () => {
                             <p>
                                 <Typography display="inline">
                                     <Box className='heading-font text-[#C9AB81] text-9xl mt-4 tracking-in-expand' sx={{ letterSpacing: 6, display: 'inline-block' }}>Swift<span className='animate__animated animate__backInRight' style={{ fontFamily: 'Ephesis, cursive' }}>Bite</span>
-</Box>
+                                    </Box>
                                 </Typography>
                             </p>
                             <Button className='bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded px-2 py-1 mt-5' colorScheme='twitter' rightIcon={<FaArrowCircleRight className='' />}>

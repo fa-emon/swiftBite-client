@@ -22,7 +22,7 @@ const About = () => {
                 <img className="ms-32 opacity-95 animate__animated animate__fadeInRight kenburns-top" style={{ height: '85vh', objectFit: 'contain', width: '100%' }} src="https://i.ibb.co/98cZtkj/pexels-photo-10757080.jpg" alt="" />
 
                 {/* here, i want use rotate animation */}
-                <img className="rounded-full rotate-center shadow-2xl border-4 border-solid border-[#C9AB81] animate__animated animate__fadeInLeft absolute top-52 w-80 h-80 object-cover brightness-75" src="https://i.ibb.co/SyD41fv/pexels-photo-230484.jpg" alt="" />
+                <img className="rounded-full rotate-center shadow-2xl border-4 border-solid border-[#C9AB81] animate__animated animate__fadeInLeft -mt-80 w-80 h-80 object-cover brightness-75" src="https://i.ibb.co/SyD41fv/pexels-photo-230484.jpg" alt="" />
             </div>
         </div>
     );
