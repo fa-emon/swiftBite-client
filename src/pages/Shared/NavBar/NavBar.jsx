@@ -26,15 +26,15 @@ const NavBar = () => {
     const navOptions = <>
         <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={'/'}>Home</Link></li>
         <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={'/menu'}>Menu</Link></li>
-        <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={'/about'}>About Us</Link></li>
-        <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={'/gallery'}>Gallery</Link></li>
         <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={'/blog'}>Blog</Link></li>
+        <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={'/gallery'}>Gallery</Link></li>
+        <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={'/about'}>About Us</Link></li>
         <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={'/contact'}>Contact</Link></li>
         {
             user ?
                 <>
                     {
-                        user?
+                        user ?
                             <>
                                 <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={isAdmin ? '/dashboard/adminHome' : '/dashboard/userHome'}>Dashboard</Link></li>
                                 <li><button onClick={handleLogOut} className="btn btn-ghost btn-sm heading-font hover:bg-[#C9AB81] hover:text-black tracking-wide">LogOut</button></li>

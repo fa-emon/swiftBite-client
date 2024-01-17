@@ -2,6 +2,7 @@ import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
 import "./Contact.css"; 
 import ContactCard from "./ContactCard/ContactCard";
 import Question from "./Question/Question";
+import Gmap from "./Gmap/Gmap";
 
 const Contact = () => {
     return (
@@ -28,6 +29,7 @@ const Contact = () => {
 
             <ContactCard></ContactCard>
             <Question></Question>
+            <Gmap></Gmap>
         </div>
     );
 };
