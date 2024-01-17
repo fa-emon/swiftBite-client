@@ -1,5 +1,6 @@
 import AboutBanner from "./AboutBanner/AboutBanner";
 import Experience from "./Experience/Experience";
+import Passion from "./Passion/Passion";
 
 
 const AboutUs = () => {
@@ -7,6 +8,7 @@ const AboutUs = () => {
         <div>
             <AboutBanner></AboutBanner>
             <Experience></Experience>
+            <Passion></Passion>
         </div>
     );
 };
