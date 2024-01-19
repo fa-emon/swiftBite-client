@@ -6,6 +6,7 @@ import Login from "../pages/Shared/login/Login";
 import Register from "../pages/Shared/register/Register";
 import Contact from "../pages/Contact/Contact";
 import AboutUs from "../pages/AboutUs/AboutUs";
+import Gallery from "../pages/Gallery/Gallery/Gallery";
 
 export const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
             {
                 path: '/about',
                 element: <AboutUs></AboutUs>
+            },
+            {
+                path: '/gallery',
+                element: <Gallery></Gallery>
             },
             {
                 path: '/contact',
