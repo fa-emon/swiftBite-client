@@ -6,6 +6,7 @@ import Feedback from "../Feedback/Feedback";
 import Reservations from "../Reservations/Reservations";
 import Services from "../Services/Services";
 import ShortView from "../ShortView/ShortView";
+import SpecialMenu from "../SpecialMenu/SpecialMenu";
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <ShortView></ShortView>
+            <SpecialMenu></SpecialMenu>
             <About></About>
             <Services></Services>
             <Reservations></Reservations>
