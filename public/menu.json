@@ -1,0 +1,1402 @@
+[
+    {
+        "id": "1",
+        "name": "Tomato Basil Soup",
+        "image": "https://example.com/tomato-basil-soup.jpg",
+        "category": "soup",
+        "price": 8.5,
+        "quantity": 200,
+        "country": "Italy",
+        "short_description": "A classic tomato soup infused with fresh basil leaves, served with a hint of cream. This comforting soup is a perfect blend of rich tomatoes and aromatic basil."
+    },
+    {
+        "id": "2",
+        "name": "Chicken Noodle Soup",
+        "image": "https://example.com/chicken-noodle-soup.jpg",
+        "category": "soup",
+        "price": 9.2,
+        "quantity": 180,
+        "country": "United States",
+        "short_description": "Hearty chicken broth with tender noodles, carrots, and celery. This classic chicken noodle soup is a soul-warming delight, perfect for any day."
+    },
+    {
+        "id": "3",
+        "name": "Spicy Lentil Soup",
+        "image": "https://example.com/spicy-lentil-soup.jpg",
+        "category": "soup",
+        "price": 7.8,
+        "quantity": 220,
+        "country": "India",
+        "short_description": "A flavorful blend of lentils, tomatoes, and spices, garnished with cilantro. This spicy lentil soup captures the essence of Indian spices, providing a warm and aromatic experience."
+    },
+    {
+        "id": "4",
+        "name": "Mushroom Bisque",
+        "image": "https://example.com/mushroom-bisque.jpg",
+        "category": "soup",
+        "price": 10.5,
+        "quantity": 150,
+        "country": "France",
+        "short_description": "Creamy mushroom soup with a touch of garlic and thyme, topped with croutons. This indulgent mushroom bisque is a French-inspired delight, offering a rich and savory experience."
+    },
+    {
+        "id": "5",
+        "name": "Minestrone Delight",
+        "image": "https://example.com/minestrone-delight.jpg",
+        "category": "soup",
+        "price": 9.9,
+        "quantity": 190,
+        "country": "Italy",
+        "short_description": "Italian vegetable soup with a medley of fresh vegetables, beans, and pasta. This Minestrone soup brings the authentic flavors of Italy to your table, packed with wholesome goodness."
+    },
+    {
+        "id": "6",
+        "name": "Thai Coconut Soup",
+        "image": "https://example.com/thai-coconut-soup.jpg",
+        "category": "soup",
+        "price": 11.2,
+        "quantity": 170,
+        "country": "Thailand",
+        "short_description": "Coconut milk-based soup with lemongrass, galangal, and a hint of chili. Immerse yourself in the exotic flavors of Thailand with this Thai Coconut Soup, a perfect balance of creaminess and spice."
+    },
+    {
+        "id": "7",
+        "name": "Potato Leek Elegance",
+        "image": "https://example.com/potato-leek-elegance.jpg",
+        "category": "soup",
+        "price": 8.7,
+        "quantity": 200,
+        "country": "Ireland",
+        "short_description": "Creamy potato and leek soup, seasoned to perfection. Experience the taste of Ireland with this Potato Leek Elegance, a comforting and velvety soup that will warm your soul."
+    },
+    {
+        "id": "8",
+        "name": "Corn Chowder",
+        "image": "https://example.com/corn-chowder.jpg",
+        "category": "soup",
+        "price": 10.0,
+        "quantity": 180,
+        "country": "United States",
+        "short_description": "Rich and creamy chowder with sweet corn, potatoes, and a touch of bacon. Indulge in the savory flavors of America with this Corn Chowder, a delightful blend of sweet corn and smoky bacon."
+    },
+    {
+        "id": "9",
+        "name": "Beef and Barley Bliss",
+        "image": "https://example.com/beef-barley-bliss.jpg",
+        "category": "soup",
+        "price": 12.5,
+        "quantity": 160,
+        "country": "Canada",
+        "short_description": "Hearty soup with tender beef chunks, barley, and a medley of vegetables. This Beef and Barley Bliss is a Canadian-inspired comfort food that will satisfy your cravings for warmth and flavor."
+    },
+    {
+        "id": "10",
+        "name": "Clam Chowder Coastal",
+        "image": "https://example.com/clam-chowder-coastal.jpg",
+        "category": "soup",
+        "price": 13.2,
+        "quantity": 210,
+        "country": "United States",
+        "short_description": "Creamy clam chowder with succulent clams, potatoes, and smoky bacon. Dive into the coastal flavors of the United States with this Clam Chowder, a creamy and satisfying seafood delight."
+    },
+    {
+        "id": "11",
+        "name": "Mango Tango Smoothie",
+        "image": "https://example.com/mango-tango-smoothie.jpg",
+        "category": "drinks",
+        "price": 5.7,
+        "quantity": 250,
+        "country": "Brazil",
+        "short_description": "A refreshing blend of ripe mangoes, yogurt, and a hint of tropical paradise. The Mango Tango Smoothie is a taste of Brazil in every sip."
+    },
+    {
+        "id": "12",
+        "name": "Matcha Bliss Latte",
+        "image": "https://example.com/matcha-bliss-latte.jpg",
+        "category": "drinks",
+        "price": 6.2,
+        "quantity": 200,
+        "country": "Japan",
+        "short_description": "Experience the serenity of Japan with our Matcha Bliss Latte, a perfect balance of green tea goodness and velvety smoothness."
+    },
+    {
+        "id": "13",
+        "name": "Tropical Fruit Punch",
+        "image": "https://example.com/tropical-fruit-punch.jpg",
+        "category": "drinks",
+        "price": 4.9,
+        "quantity": 300,
+        "country": "Mexico",
+        "short_description": "Sip on the vibrant flavors of Mexico with our Tropical Fruit Punch, a medley of exotic fruits and refreshing goodness."
+    },
+    {
+        "id": "14",
+        "name": "Iced Caramel Macchiato",
+        "image": "https://example.com/iced-caramel-macchiato.jpg",
+        "category": "drinks",
+        "price": 5.5,
+        "quantity": 220,
+        "country": "United States",
+        "short_description": "Indulge in the rich and smooth Iced Caramel Macchiato, a delightful coffee creation that brings the essence of the United States to your cup."
+    },
+    {
+        "id": "15",
+        "name": "Watermelon Mint Refresher",
+        "image": "https://example.com/watermelon-mint-refresher.jpg",
+        "category": "drinks",
+        "price": 4.8,
+        "quantity": 280,
+        "country": "Australia",
+        "short_description": "Quench your thirst with the Watermelon Mint Refresher, a cooling blend of juicy watermelon and fresh mint, inspired by the land Down Under."
+    },
+    {
+        "id": "16",
+        "name": "Blueberry Burst Lemonade",
+        "image": "https://example.com/blueberry-burst-lemonade.jpg",
+        "category": "drinks",
+        "price": 5.9,
+        "quantity": 240,
+        "country": "Canada",
+        "short_description": "Enjoy the burst of blueberries in our refreshing Blueberry Burst Lemonade, a Canadian twist on a classic summer drink."
+    },
+    {
+        "id": "17",
+        "name": "Passionfruit Mojito",
+        "image": "https://example.com/passionfruit-mojito.jpg",
+        "category": "drinks",
+        "price": 6.4,
+        "quantity": 210,
+        "country": "Cuba",
+        "short_description": "Transport yourself to the vibrant streets of Cuba with our Passionfruit Mojito, a tropical and zesty concoction that will awaken your senses."
+    },
+    {
+        "id": "18",
+        "name": "Ginger Zinger Iced Tea",
+        "image": "https://example.com/ginger-zinger-iced-tea.jpg",
+        "category": "drinks",
+        "price": 5.2,
+        "quantity": 260,
+        "country": "India",
+        "short_description": "Savor the spice of India with our Ginger Zinger Iced Tea, a refreshing blend of black tea, ginger, and a hint of sweetness."
+    },
+    {
+        "id": "19",
+        "name": "Pina Colada Paradise",
+        "image": "https://example.com/pina-colada-paradise.jpg",
+        "category": "drinks",
+        "price": 6.8,
+        "quantity": 190,
+        "country": "Costa Rica",
+        "short_description": "Escape to the beaches of Costa Rica with our Pina Colada Paradise, a tropical blend of coconut cream, pineapple, and a touch of paradise in every sip."
+    },
+    {
+        "id": "20",
+        "name": "Chai Latte Elegance",
+        "image": "https://example.com/chai-latte-elegance.jpg",
+        "category": "drinks",
+        "price": 5.6,
+        "quantity": 230,
+        "country": "India",
+        "short_description": "Experience the richness of Indian spices in our Chai Latte Elegance, a soothing blend of black tea, spices, and creamy goodness."
+    },
+    {
+        "id": "21",
+        "name": "Tiramisu Temptation",
+        "image": "https://example.com/tiramisu-temptation.jpg",
+        "category": "desserts",
+        "price": 7.5,
+        "quantity": 180,
+        "country": "Italy",
+        "short_description": "Indulge in the classic Italian delight with our Tiramisu Temptation, layers of coffee-soaked ladyfingers and creamy mascarpone, dusted with cocoa powder."
+    },
+    {
+        "id": "22",
+        "name": "Chocolate Lava Heaven",
+        "image": "https://example.com/chocolate-lava-heaven.jpg",
+        "category": "desserts",
+        "price": 8.2,
+        "quantity": 160,
+        "country": "Belgium",
+        "short_description": "Experience the decadence of Belgian chocolate with our Chocolate Lava Heaven, a rich and gooey chocolate lava cake that will melt your heart."
+    },
+    {
+        "id": "23",
+        "name": "Strawberry Cheesecake Symphony",
+        "image": "https://example.com/strawberry-cheesecake-symphony.jpg",
+        "category": "desserts",
+        "price": 7.8,
+        "quantity": 200,
+        "country": "United States",
+        "short_description": "Savor the harmony of flavors in our Strawberry Cheesecake Symphony, a velvety cheesecake topped with luscious strawberries and a sweet strawberry glaze."
+    },
+    {
+        "id": "24",
+        "name": "Mango Tango Sorbet",
+        "image": "https://example.com/mango-tango-sorbet.jpg",
+        "category": "desserts",
+        "price": 6.9,
+        "quantity": 220,
+        "country": "India",
+        "short_description": "Cool down with the vibrant flavors of India with our Mango Tango Sorbet, a refreshing blend of ripe mangoes in a light and fruity sorbet."
+    },
+    {
+        "id": "25",
+        "name": "French Silk Pie Fantasy",
+        "image": "https://example.com/french-silk-pie-fantasy.jpg",
+        "category": "desserts",
+        "price": 8.5,
+        "quantity": 170,
+        "country": "France",
+        "short_description": "Embark on a journey to France with our French Silk Pie Fantasy, a silky smooth chocolate pie topped with whipped cream and chocolate shavings."
+    },
+    {
+        "id": "26",
+        "name": "Blueberry Bliss Parfait",
+        "image": "https://example.com/blueberry-bliss-parfait.jpg",
+        "category": "desserts",
+        "price": 7.2,
+        "quantity": 190,
+        "country": "Canada",
+        "short_description": "Delight in the freshness of Canadian blueberries with our Blueberry Bliss Parfait, layers of yogurt, granola, and succulent blueberries."
+    },
+    {
+        "id": "27",
+        "name": "Caramel Apple Delight",
+        "image": "https://example.com/caramel-apple-delight.jpg",
+        "category": "desserts",
+        "price": 7.0,
+        "quantity": 210,
+        "country": "United States",
+        "short_description": "Fall in love with the taste of autumn with our Caramel Apple Delight, caramel-drenched apple slices atop a warm and flaky pastry."
+    },
+    {
+        "id": "28",
+        "name": "Pistachio Paradise Cake",
+        "image": "https://example.com/pistachio-paradise-cake.jpg",
+        "category": "desserts",
+        "price": 8.7,
+        "quantity": 180,
+        "country": "Iran",
+        "short_description": "Experience the nutty goodness of Iran with our Pistachio Paradise Cake, a heavenly pistachio-flavored cake topped with pistachio cream."
+    },
+    {
+        "id": "29",
+        "name": "Mint Chocolate Dream",
+        "image": "https://example.com/mint-chocolate-dream.jpg",
+        "category": "desserts",
+        "price": 8.0,
+        "quantity": 200,
+        "country": "Switzerland",
+        "short_description": "Immerse yourself in the Swiss chocolate tradition with our Mint Chocolate Dream, a delightful combination of smooth chocolate and refreshing mint."
+    },
+    {
+        "id": "30",
+        "name": "Raspberry White Chocolate Mousse",
+        "image": "https://example.com/raspberry-white-chocolate-mousse.jpg",
+        "category": "desserts",
+        "price": 9.1,
+        "quantity": 150,
+        "country": "France",
+        "short_description": "Elevate your senses with our Raspberry White Chocolate Mousse, a decadent French dessert that combines the sweetness of white chocolate with the tartness of raspberries."
+    },
+    {
+        "id": "31",
+        "name": "Margherita Supreme",
+        "image": "https://example.com/margherita-supreme-pizza.jpg",
+        "category": "pizza",
+        "price": 11.5,
+        "quantity": 210,
+        "country": "Italy",
+        "short_description": "A classic Margherita pizza with a supreme twist, featuring fresh mozzarella, ripe tomatoes, basil, and a drizzle of balsamic glaze."
+    },
+    {
+        "id": "32",
+        "name": "Pepperoni Passion",
+        "image": "https://example.com/pepperoni-passion-pizza.jpg",
+        "category": "pizza",
+        "price": 12.2,
+        "quantity": 190,
+        "country": "United States",
+        "short_description": "Satisfy your pepperoni cravings with our Pepperoni Passion pizza, loaded with a generous amount of savory pepperoni slices on a bed of melted cheese."
+    },
+    {
+        "id": "33",
+        "name": "Mediterranean Delight",
+        "image": "https://example.com/mediterranean-delight-pizza.jpg",
+        "category": "pizza",
+        "price": 13.0,
+        "quantity": 180,
+        "country": "Greece",
+        "short_description": "Transport your taste buds to the Mediterranean with our Mediterranean Delight pizza, topped with olives, feta cheese, sun-dried tomatoes, and fresh herbs."
+    },
+    {
+        "id": "34",
+        "name": "BBQ Chicken Bliss",
+        "image": "https://example.com/bbq-chicken-bliss-pizza.jpg",
+        "category": "pizza",
+        "price": 14.5,
+        "quantity": 200,
+        "country": "United States",
+        "short_description": "Experience the bliss of BBQ flavor with our BBQ Chicken Bliss pizza, featuring succulent grilled chicken, red onions, BBQ sauce, and cilantro."
+    },
+    {
+        "id": "35",
+        "name": "Capricciosa Classic",
+        "image": "https://example.com/capricciosa-classic-pizza.jpg",
+        "category": "pizza",
+        "price": 12.8,
+        "quantity": 220,
+        "country": "Italy",
+        "short_description": "Enjoy the classic flavors of Italy with our Capricciosa Classic pizza, adorned with ham, artichokes, mushrooms, olives, and a sprinkle of oregano."
+    },
+    {
+        "id": "36",
+        "name": "Spicy Sausage Fiesta",
+        "image": "https://example.com/spicy-sausage-fiesta-pizza.jpg",
+        "category": "pizza",
+        "price": 13.7,
+        "quantity": 210,
+        "country": "Mexico",
+        "short_description": "Heat things up with our Spicy Sausage Fiesta pizza, featuring spicy sausage, jalapeños, bell peppers, and a zesty tomato sauce."
+    },
+    {
+        "id": "37",
+        "name": "Truffle Mushroom Elegance",
+        "image": "https://example.com/truffle-mushroom-elegance-pizza.jpg",
+        "category": "pizza",
+        "price": 15.2,
+        "quantity": 180,
+        "country": "France",
+        "short_description": "Indulge in the luxurious flavors of France with our Truffle Mushroom Elegance pizza, topped with truffle oil, assorted mushrooms, and a blend of cheeses."
+    },
+    {
+        "id": "38",
+        "name": "Hawaiian Paradise",
+        "image": "https://example.com/hawaiian-paradise-pizza.jpg",
+        "category": "pizza",
+        "price": 14.0,
+        "quantity": 200,
+        "country": "United States",
+        "short_description": "Escape to a tropical paradise with our Hawaiian Paradise pizza, featuring ham, pineapple, and a perfect harmony of sweet and savory flavors."
+    },
+    {
+        "id": "39",
+        "name": "Prosciutto Pesto Perfection",
+        "image": "https://example.com/prosciutto-pesto-perfection-pizza.jpg",
+        "category": "pizza",
+        "price": 16.5,
+        "quantity": 190,
+        "country": "Italy",
+        "short_description": "Experience the perfection of Italy with our Prosciutto Pesto Perfection pizza, topped with prosciutto, cherry tomatoes, arugula, and a drizzle of pesto."
+    },
+    {
+        "id": "40",
+        "name": "Four Cheese Fantasy",
+        "image": "https://example.com/four-cheese-fantasy-pizza.jpg",
+        "category": "pizza",
+        "price": 15.8,
+        "quantity": 220,
+        "country": "Italy",
+        "short_description": "Dive into a fantasy of cheese with our Four Cheese Fantasy pizza, a decadent blend of mozzarella, cheddar, feta, and gorgonzola."
+    },
+    {
+        "id": "41",
+        "name": "Caesar Supreme Salad",
+        "image": "https://example.com/caesar-supreme-salad.jpg",
+        "category": "salad",
+        "price": 9.5,
+        "quantity": 180,
+        "country": "United States",
+        "short_description": "Elevate your salad experience with our Caesar Supreme Salad, featuring crisp romaine lettuce, grilled chicken, cherry tomatoes, parmesan, and Caesar dressing."
+    },
+    {
+        "id": "42",
+        "name": "Greek Goddess Bowl",
+        "image": "https://example.com/greek-goddess-bowl.jpg",
+        "category": "salad",
+        "price": 8.8,
+        "quantity": 200,
+        "country": "Greece",
+        "short_description": "Indulge in the flavors of Greece with our Greek Goddess Bowl, a refreshing medley of cucumber, Kalamata olives, feta cheese, tomatoes, and tzatziki dressing."
+    },
+    {
+        "id": "43",
+        "name": "Mango Avocado Fiesta",
+        "image": "https://example.com/mango-avocado-fiesta-salad.jpg",
+        "category": "salad",
+        "price": 10.2,
+        "quantity": 190,
+        "country": "Mexico",
+        "short_description": "Celebrate a fiesta of flavors with our Mango Avocado Fiesta Salad, featuring ripe mango, creamy avocado, black beans, corn, and a zesty lime dressing."
+    },
+    {
+        "id": "44",
+        "name": "Caprese Garden Delight",
+        "image": "https://example.com/caprese-garden-delight-salad.jpg",
+        "category": "salad",
+        "price": 9.7,
+        "quantity": 210,
+        "country": "Italy",
+        "short_description": "Immerse yourself in the freshness of Italy with our Caprese Garden Delight Salad, featuring juicy tomatoes, mozzarella, basil, and balsamic glaze."
+    },
+    {
+        "id": "45",
+        "name": "Asian Sesame Fusion",
+        "image": "https://example.com/asian-sesame-fusion-salad.jpg",
+        "category": "salad",
+        "price": 10.5,
+        "quantity": 180,
+        "country": "Japan",
+        "short_description": "Experience the fusion of flavors with our Asian Sesame Fusion Salad, featuring mixed greens, grilled shrimp, sesame seeds, edamame, and soy-ginger dressing."
+    },
+    {
+        "id": "46",
+        "name": "Southwest Quinoa Power Bowl",
+        "image": "https://example.com/southwest-quinoa-power-bowl.jpg",
+        "category": "salad",
+        "price": 11.0,
+        "quantity": 200,
+        "country": "United States",
+        "short_description": "Fuel your day with our Southwest Quinoa Power Bowl, a hearty blend of quinoa, black beans, corn, avocado, and chipotle-lime dressing."
+    },
+    {
+        "id": "47",
+        "name": "Mediterranean Orzo Sunshine",
+        "image": "https://example.com/mediterranean-orzo-sunshine-salad.jpg",
+        "category": "salad",
+        "price": 10.8,
+        "quantity": 190,
+        "country": "Greece",
+        "short_description": "Bask in the Mediterranean sunshine with our Mediterranean Orzo Sunshine Salad, featuring orzo pasta, cherry tomatoes, olives, feta, and lemon vinaigrette."
+    },
+    {
+        "id": "48",
+        "name": "Cobb Ranch Harvest",
+        "image": "https://example.com/cobb-ranch-harvest-salad.jpg",
+        "category": "salad",
+        "price": 11.2,
+        "quantity": 210,
+        "country": "United States",
+        "short_description": "Harvest the flavors of the season with our Cobb Ranch Harvest Salad, featuring mixed greens, grilled chicken, bacon, avocado, and creamy ranch dressing."
+    },
+    {
+        "id": "49",
+        "name": "Tropical Fruit Paradise",
+        "image": "https://example.com/tropical-fruit-paradise-salad.jpg",
+        "category": "salad",
+        "price": 9.9,
+        "quantity": 180,
+        "country": "Brazil",
+        "short_description": "Escape to a tropical paradise with our Tropical Fruit Paradise Salad, featuring a medley of fresh tropical fruits, mixed greens, and passion fruit vinaigrette."
+    },
+    {
+        "id": "50",
+        "name": "Protein-Packed Quinoa Crunch",
+        "image": "https://example.com/protein-packed-quinoa-crunch-salad.jpg",
+        "category": "salad",
+        "price": 10.5,
+        "quantity": 200,
+        "country": "Peru",
+        "short_description": "Boost your energy with our Protein-Packed Quinoa Crunch Salad, featuring quinoa, black beans, corn, avocado, and a tangy lime-cilantro dressing."
+    },
+    {
+        "id": "51",
+        "name": "Classic Beef Royale",
+        "image": "https://example.com/classic-beef-royale-burger.jpg",
+        "category": "burger",
+        "price": 12.5,
+        "quantity": 180,
+        "country": "United States",
+        "short_description": "Savor the perfection of our Classic Beef Royale Burger, featuring a juicy beef patty, lettuce, tomato, onion, and our special secret sauce."
+    },
+    {
+        "id": "52",
+        "name": "Spicy Jalapeño Fiesta Burger",
+        "image": "https://example.com/spicy-jalapeno-fiesta-burger.jpg",
+        "category": "burger",
+        "price": 11.8,
+        "quantity": 190,
+        "country": "Mexico",
+        "short_description": "Add a kick to your meal with our Spicy Jalapeño Fiesta Burger, featuring a spicy beef patty, pepper jack cheese, jalapeños, and chipotle mayo."
+    },
+    {
+        "id": "53",
+        "name": "Mushroom Swiss Elegance Burger",
+        "image": "https://example.com/mushroom-swiss-elegance-burger.jpg",
+        "category": "burger",
+        "price": 13.2,
+        "quantity": 200,
+        "country": "Switzerland",
+        "short_description": "Indulge in the sophistication of our Mushroom Swiss Elegance Burger, featuring a succulent beef patty, Swiss cheese, sautéed mushrooms, and truffle aioli."
+    },
+    {
+        "id": "54",
+        "name": "BBQ Bacon Cheddar Bliss Burger",
+        "image": "https://example.com/bbq-bacon-cheddar-bliss-burger.jpg",
+        "category": "burger",
+        "price": 14.0,
+        "quantity": 210,
+        "country": "United States",
+        "short_description": "Experience bliss with our BBQ Bacon Cheddar Bliss Burger, featuring a grilled beef patty, crispy bacon, cheddar cheese, and smoky BBQ sauce."
+    },
+    {
+        "id": "55",
+        "name": "Teriyaki Pineapple Paradise Burger",
+        "image": "https://example.com/teriyaki-pineapple-paradise-burger.jpg",
+        "category": "burger",
+        "price": 13.5,
+        "quantity": 180,
+        "country": "Japan",
+        "short_description": "Escape to a tropical paradise with our Teriyaki Pineapple Paradise Burger, featuring a teriyaki-glazed beef patty, grilled pineapple, and teriyaki mayo."
+    },
+    {
+        "id": "56",
+        "name": "Avocado Turkey Delight Burger",
+        "image": "https://example.com/avocado-turkey-delight-burger.jpg",
+        "category": "burger",
+        "price": 12.7,
+        "quantity": 190,
+        "country": "United States",
+        "short_description": "Delight your taste buds with our Avocado Turkey Delight Burger, featuring a turkey patty, creamy avocado, lettuce, and cranberry mayo."
+    },
+    {
+        "id": "57",
+        "name": "Fiery Cajun Chicken Heatwave Burger",
+        "image": "https://example.com/fiery-cajun-chicken-heatwave-burger.jpg",
+        "category": "burger",
+        "price": 12.3,
+        "quantity": 200,
+        "country": "United States",
+        "short_description": "Turn up the heat with our Fiery Cajun Chicken Heatwave Burger, featuring a Cajun-spiced chicken patty, pepper jack cheese, lettuce, and spicy mayo."
+    },
+    {
+        "id": "58",
+        "name": "Mediterranean Lamb Feast Burger",
+        "image": "https://example.com/mediterranean-lamb-feast-burger.jpg",
+        "category": "burger",
+        "price": 14.8,
+        "quantity": 210,
+        "country": "Greece",
+        "short_description": "Feast on the flavors of the Mediterranean with our Mediterranean Lamb Feast Burger, featuring a seasoned lamb patty, feta cheese, olives, and tzatziki sauce."
+    },
+    {
+        "id": "59",
+        "name": "Portobello Swiss Veggie Bliss Burger",
+        "image": "https://example.com/portobello-swiss-veggie-bliss-burger.jpg",
+        "category": "burger",
+        "price": 11.9,
+        "quantity": 220,
+        "country": "Switzerland",
+        "short_description": "Indulge in veggie bliss with our Portobello Swiss Veggie Bliss Burger, featuring a grilled portobello mushroom, Swiss cheese, lettuce, and basil mayo."
+    },
+    {
+        "id": "60",
+        "name": "Smokey Chipotle BBQ Burger",
+        "image": "https://example.com/smokey-chipotle-bbq-burger.jpg",
+        "category": "burger",
+        "price": 13.0,
+        "quantity": 220,
+        "country": "United States",
+        "short_description": "Savor the smokiness with our Smokey Chipotle BBQ Burger, featuring a beef patty, smoked Gouda cheese, crispy onion straws, lettuce, and chipotle BBQ sauce."
+    },
+    {
+        "id": "61",
+        "name": "Turkey Club Deluxe",
+        "image": "https://example.com/turkey-club-deluxe-sandwich.jpg",
+        "category": "sandwich",
+        "price": 9.5,
+        "quantity": 200,
+        "country": "United States",
+        "short_description": "Delight in our Turkey Club Deluxe Sandwich, featuring layers of roasted turkey, crispy bacon, lettuce, tomato, and mayo on toasted whole grain bread."
+    },
+    {
+        "id": "62",
+        "name": "Caprese Panini Perfection",
+        "image": "https://example.com/caprese-panini-perfection.jpg",
+        "category": "sandwich",
+        "price": 8.8,
+        "quantity": 220,
+        "country": "Italy",
+        "short_description": "Experience perfection with our Caprese Panini Perfection, featuring fresh mozzarella, tomatoes, basil, and balsamic glaze on grilled ciabatta."
+    },
+    {
+        "id": "63",
+        "name": "Smoked Salmon Bagel Bliss",
+        "image": "https://example.com/smoked-salmon-bagel-bliss.jpg",
+        "category": "sandwich",
+        "price": 10.2,
+        "quantity": 190,
+        "country": "Sweden",
+        "short_description": "Indulge in bliss with our Smoked Salmon Bagel Bliss, featuring smoked salmon, cream cheese, capers, and red onion on a toasted bagel."
+    },
+    {
+        "id": "64",
+        "name": "Mediterranean Veggie Wrap",
+        "image": "https://example.com/mediterranean-veggie-wrap.jpg",
+        "category": "sandwich",
+        "price": 9.7,
+        "quantity": 210,
+        "country": "Greece",
+        "short_description": "Take a journey to the Mediterranean with our Mediterranean Veggie Wrap, featuring hummus, roasted vegetables, feta, and tzatziki in a warm tortilla."
+    },
+    {
+        "id": "65",
+        "name": "BBQ Pulled Pork Stack",
+        "image": "https://example.com/bbq-pulled-pork-stack.jpg",
+        "category": "sandwich",
+        "price": 11.5,
+        "quantity": 200,
+        "country": "United States",
+        "short_description": "Satisfy your cravings with our BBQ Pulled Pork Stack, featuring slow-cooked pulled pork, coleslaw, and BBQ sauce on a brioche bun."
+    },
+    {
+        "id": "66",
+        "name": "Grilled Chicken Pesto Panini",
+        "image": "https://example.com/grilled-chicken-pesto-panini.jpg",
+        "category": "sandwich",
+        "price": 12.7,
+        "quantity": 190,
+        "country": "Italy",
+        "short_description": "Elevate your taste with our Grilled Chicken Pesto Panini, featuring grilled chicken, pesto, sun-dried tomatoes, and provolone on ciabatta."
+    },
+    {
+        "id": "67",
+        "name": "Cubano Fusion Delight",
+        "image": "https://example.com/cubano-fusion-delight.jpg",
+        "category": "sandwich",
+        "price": 13.5,
+        "quantity": 220,
+        "country": "Cuba",
+        "short_description": "Experience fusion delight with our Cubano Fusion Delight, featuring ham, roasted pork, Swiss cheese, pickles, and mustard on Cuban bread."
+    },
+    {
+        "id": "68",
+        "name": "Avocado Chicken Club Wrap",
+        "image": "https://example.com/avocado-chicken-club-wrap.jpg",
+        "category": "sandwich",
+        "price": 12.8,
+        "quantity": 200,
+        "country": "United States",
+        "short_description": "Enjoy freshness with our Avocado Chicken Club Wrap, featuring grilled chicken, avocado, bacon, lettuce, tomato, and ranch in a soft tortilla."
+    },
+    {
+        "id": "69",
+        "name": "Tuna Melt Sensation",
+        "image": "https://example.com/tuna-melt-sensation.jpg",
+        "category": "sandwich",
+        "price": 10.2,
+        "quantity": 190,
+        "country": "United States",
+        "short_description": "Indulge in sensation with our Tuna Melt Sensation, featuring tuna salad, melted cheddar, and tomato on grilled sourdough."
+    },
+    {
+        "id": "70",
+        "name": "Roast Beef Horseradish Hero",
+        "image": "https://example.com/roast-beef-horseradish-hero.jpg",
+        "category": "sandwich",
+        "price": 11.0,
+        "quantity": 210,
+        "country": "United States",
+        "short_description": "Savor the bold flavors of our Roast Beef Horseradish Hero, featuring roast beef, provolone, lettuce, tomato, and horseradish sauce on a hero roll."
+    },
+    {
+        "id": "71",
+        "name": "Garlic Butter Shrimp Scampi",
+        "image": "https://example.com/garlic-butter-shrimp-scampi.jpg",
+        "category": "seafood",
+        "price": 16.5,
+        "quantity": 180,
+        "country": "Italy",
+        "short_description": "Indulge in the richness of our Garlic Butter Shrimp Scampi, featuring succulent shrimp sautéed in garlic butter, white wine, and lemon, served over linguine."
+    },
+    {
+        "id": "72",
+        "name": "Grilled Salmon Citrus Glaze",
+        "image": "https://example.com/grilled-salmon-citrus-glaze.jpg",
+        "category": "seafood",
+        "price": 18.8,
+        "quantity": 160,
+        "country": "United States",
+        "short_description": "Savor the freshness of our Grilled Salmon Citrus Glaze, featuring perfectly grilled salmon fillet with a zesty citrus glaze, served with roasted vegetables."
+    },
+    {
+        "id": "73",
+        "name": "Lobster Tail Extravaganza",
+        "image": "https://example.com/lobster-tail-extravaganza.jpg",
+        "category": "seafood",
+        "price": 29.5,
+        "quantity": 140,
+        "country": "United States",
+        "short_description": "Experience luxury with our Lobster Tail Extravaganza, featuring tender lobster tails broiled to perfection, served with drawn butter and lemon wedges."
+    },
+    {
+        "id": "74",
+        "name": "Szechuan Spicy Chili Crab",
+        "image": "https://example.com/szechuan-spicy-chili-crab.jpg",
+        "category": "seafood",
+        "price": 22.2,
+        "quantity": 170,
+        "country": "China",
+        "short_description": "Ignite your taste buds with our Szechuan Spicy Chili Crab, featuring whole crab cooked in a fiery Szechuan sauce with chili, garlic, and spices."
+    },
+    {
+        "id": "75",
+        "name": "Paella Valenciana Delight",
+        "image": "https://example.com/paella-valenciana-delight.jpg",
+        "category": "seafood",
+        "price": 24.0,
+        "quantity": 190,
+        "country": "Spain",
+        "short_description": "Transport yourself to Spain with our Paella Valenciana Delight, a classic paella with a medley of seafood, saffron-infused rice, and aromatic herbs."
+    },
+    {
+        "id": "76",
+        "name": "Coconut Lime Grilled Shrimp",
+        "image": "https://example.com/coconut-lime-grilled-shrimp.jpg",
+        "category": "seafood",
+        "price": 17.7,
+        "quantity": 200,
+        "country": "Thailand",
+        "short_description": "Escape to the tropics with our Coconut Lime Grilled Shrimp, featuring shrimp marinated in coconut milk, lime, and Thai spices, grilled to perfection."
+    },
+    {
+        "id": "77",
+        "name": "Cajun Blackened Catfish",
+        "image": "https://example.com/cajun-blackened-catfish.jpg",
+        "category": "seafood",
+        "price": 15.5,
+        "quantity": 210,
+        "country": "United States",
+        "short_description": "Spice up your palate with our Cajun Blackened Catfish, featuring catfish fillets seasoned with Cajun spices, seared to a flavorful blackened perfection."
+    },
+    {
+        "id": "78",
+        "name": "Miso Glazed Chilean Sea Bass",
+        "image": "https://example.com/miso-glazed-chilean-sea-bass.jpg",
+        "category": "seafood",
+        "price": 26.8,
+        "quantity": 180,
+        "country": "Japan",
+        "short_description": "Experience elegance with our Miso Glazed Chilean Sea Bass, featuring buttery sea bass glazed with a savory miso marinade, served with steamed bok choy."
+    },
+    {
+        "id": "79",
+        "name": "Shrimp and Crab Linguine",
+        "image": "https://example.com/shrimp-and-crab-linguine.jpg",
+        "category": "seafood",
+        "price": 20.2,
+        "quantity": 170,
+        "country": "Italy",
+        "short_description": "Delight in our Shrimp and Crab Linguine, featuring succulent shrimp and crab tossed in a garlic white wine sauce with linguine pasta."
+    },
+    {
+        "id": "80",
+        "name": "Tuna Poke Bowl",
+        "image": "https://example.com/tuna-poke-bowl.jpg",
+        "category": "seafood",
+        "price": 21.5,
+        "quantity": 200,
+        "country": "Hawaii",
+        "short_description": "Embrace the flavors of Hawaii with our Tuna Poke Bowl, featuring fresh tuna marinated in soy, sesame, and avocado, served over a bed of sushi rice."
+    },
+    {
+        "id": "81",
+        "name": "Prime Rib Perfection",
+        "image": "https://example.com/prime-rib-perfection.jpg",
+        "category": "steak",
+        "price": 32.5,
+        "quantity": 180,
+        "country": "United States",
+        "short_description": "Indulge in the perfection of our Prime Rib, slow-roasted to a juicy medium-rare, served with au jus and creamy horseradish sauce."
+    },
+    {
+        "id": "82",
+        "name": "Filet Mignon Elegance",
+        "image": "https://example.com/filet-mignon-elegance.jpg",
+        "category": "steak",
+        "price": 35.8,
+        "quantity": 160,
+        "country": "France",
+        "short_description": "Experience elegance with our Filet Mignon, a tender cut of beef grilled to perfection, served with a red wine reduction sauce and truffle butter."
+    },
+    {
+        "id": "83",
+        "name": "Ribeye Royale",
+        "image": "https://example.com/ribeye-royale.jpg",
+        "category": "steak",
+        "price": 28.5,
+        "quantity": 190,
+        "country": "United States",
+        "short_description": "Savor the richness of our Ribeye Royale, a well-marbled ribeye steak grilled to your liking, served with garlic mashed potatoes and sautéed spinach."
+    },
+    {
+        "id": "84",
+        "name": "T-Bone Temptation",
+        "image": "https://example.com/t-bone-temptation.jpg",
+        "category": "steak",
+        "price": 30.2,
+        "quantity": 170,
+        "country": "United States",
+        "short_description": "Give in to temptation with our T-Bone Steak, featuring both the strip and tenderloin cuts, grilled to perfection and served with a savory mushroom sauce."
+    },
+    {
+        "id": "85",
+        "name": "Porterhouse Powerhouse",
+        "image": "https://example.com/porterhouse-powerhouse.jpg",
+        "category": "steak",
+        "price": 38.0,
+        "quantity": 200,
+        "country": "United States",
+        "short_description": "Unleash the powerhouse flavors of our Porterhouse Steak, a combination of strip and tenderloin, expertly grilled and served with loaded baked potato."
+    },
+    {
+        "id": "86",
+        "name": "Sirloin Sensation",
+        "image": "https://example.com/sirloin-sensation.jpg",
+        "category": "steak",
+        "price": 25.7,
+        "quantity": 180,
+        "country": "Brazil",
+        "short_description": "Delight in the sensation of our Sirloin Steak, a lean and flavorful cut grilled to perfection, served with chimichurri sauce and roasted vegetables."
+    },
+    {
+        "id": "87",
+        "name": "New York Strip Delight",
+        "image": "https://example.com/new-york-strip-delight.jpg",
+        "category": "steak",
+        "price": 33.5,
+        "quantity": 210,
+        "country": "United States",
+        "short_description": "Enjoy the delight of our New York Strip Steak, a well-marbled and juicy cut grilled to perfection, served with crispy garlic parmesan fries."
+    },
+    {
+        "id": "88",
+        "name": "Chateaubriand Classic",
+        "image": "https://example.com/chateaubriand-classic.jpg",
+        "category": "steak",
+        "price": 40.8,
+        "quantity": 190,
+        "country": "France",
+        "short_description": "Indulge in the classic elegance of our Chateaubriand, a center-cut filet roasted to perfection, served with béarnaise sauce and buttery asparagus."
+    },
+    {
+        "id": "89",
+        "name": "Grilled Lamb Loin Luxury",
+        "image": "https://example.com/grilled-lamb-loin-luxury.jpg",
+        "category": "steak",
+        "price": 36.2,
+        "quantity": 200,
+        "country": "Greece",
+        "short_description": "Experience luxury with our Grilled Lamb Loin, marinated and grilled to perfection, served with mint-infused tzatziki and roasted Mediterranean vegetables."
+    },
+    {
+        "id": "90",
+        "name": "Surf and Turf Extravaganza",
+        "image": "https://example.com/surf-and-turf-extravaganza.jpg",
+        "category": "steak",
+        "price": 42.5,
+        "quantity": 180,
+        "country": "United States",
+        "short_description": "Indulge in an extravaganza of flavors with our Surf and Turf, featuring a perfectly grilled steak paired with succulent lobster tail, served with drawn butter."
+    },
+    {
+        "id": "91",
+        "name": "Spaghetti Bolognese Classic",
+        "image": "https://example.com/spaghetti-bolognese-classic.jpg",
+        "category": "pasta",
+        "price": 15.5,
+        "quantity": 200,
+        "country": "Italy",
+        "short_description": "Savor the classic taste of our Spaghetti Bolognese, featuring al dente spaghetti topped with a rich and savory Bolognese sauce made with ground beef, tomatoes, and herbs."
+    },
+    {
+        "id": "92",
+        "name": "Shrimp Scampi Linguine",
+        "image": "https://example.com/shrimp-scampi-linguine.jpg",
+        "category": "pasta",
+        "price": 18.2,
+        "quantity": 180,
+        "country": "Italy",
+        "short_description": "Indulge in the flavors of the sea with our Shrimp Scampi Linguine, featuring succulent shrimp sautéed in garlic, white wine, and butter, served over linguine."
+    },
+    {
+        "id": "93",
+        "name": "Chicken Alfredo Supreme",
+        "image": "https://example.com/chicken-alfredo-supreme.jpg",
+        "category": "pasta",
+        "price": 20.8,
+        "quantity": 190,
+        "country": "Italy",
+        "short_description": "Experience supreme indulgence with our Chicken Alfredo, featuring fettuccine pasta tossed in a creamy Alfredo sauce with grilled chicken, mushrooms, and spinach."
+    },
+    {
+        "id": "94",
+        "name": "Penne Vodka Blush",
+        "image": "https://example.com/penne-vodka-blush.jpg",
+        "category": "pasta",
+        "price": 16.5,
+        "quantity": 210,
+        "country": "Italy",
+        "short_description": "Delight in the blush of flavors with our Penne Vodka Blush, featuring penne pasta in a creamy tomato and vodka-infused sauce with a hint of spice."
+    },
+    {
+        "id": "95",
+        "name": "Lobster Ravioli Extravaganza",
+        "image": "https://example.com/lobster-ravioli-extravaganza.jpg",
+        "category": "pasta",
+        "price": 28.0,
+        "quantity": 170,
+        "country": "Italy",
+        "short_description": "Indulge in an extravagant pasta experience with our Lobster Ravioli, featuring delicate ravioli filled with lobster, served in a creamy lobster bisque sauce."
+    },
+    {
+        "id": "96",
+        "name": "Vegetarian Pesto Gemelli",
+        "image": "https://example.com/vegetarian-pesto-gemelli.jpg",
+        "category": "pasta",
+        "price": 17.7,
+        "quantity": 200,
+        "country": "Italy",
+        "short_description": "Embrace freshness with our Vegetarian Pesto Gemelli, featuring gemelli pasta tossed in a vibrant basil pesto sauce with cherry tomatoes, artichokes, and pine nuts."
+    },
+    {
+        "id": "97",
+        "name": "Carbonara Elegance",
+        "image": "https://example.com/carbonara-elegance.jpg",
+        "category": "pasta",
+        "price": 22.5,
+        "quantity": 180,
+        "country": "Italy",
+        "short_description": "Experience elegance with our Carbonara, featuring spaghetti in a velvety sauce of eggs, Parmesan cheese, pancetta, and black pepper."
+    },
+    {
+        "id": "98",
+        "name": "Seafood Linguine Delight",
+        "image": "https://example.com/seafood-linguine-delight.jpg",
+        "category": "pasta",
+        "price": 25.2,
+        "quantity": 190,
+        "country": "Italy",
+        "short_description": "Delight in the flavors of the sea with our Seafood Linguine, featuring linguine pasta tossed with a medley of seafood in a garlic white wine sauce."
+    },
+    {
+        "id": "99",
+        "name": "Wild Mushroom Risotto",
+        "image": "https://example.com/wild-mushroom-risotto.jpg",
+        "category": "pasta",
+        "price": 21.0,
+        "quantity": 200,
+        "country": "Italy",
+        "short_description": "Savor the earthy flavors of our Wild Mushroom Risotto, featuring Arborio rice cooked to creamy perfection with a mix of wild mushrooms and Parmesan cheese."
+    },
+    {
+        "id": "100",
+        "name": "Spinach and Ricotta Stuffed Shells",
+        "image": "https://example.com/spinach-ricotta-stuffed-shells.jpg",
+        "category": "pasta",
+        "price": 19.5,
+        "quantity": 210,
+        "country": "Italy",
+        "short_description": "Indulge in comfort with our Spinach and Ricotta Stuffed Shells, featuring jumbo pasta shells filled with a delicious blend of spinach and ricotta, baked to perfection."
+    },
+    {
+        "id": "101",
+        "name": "Mushroom Risotto",
+        "image": "https://example.com/mushroom-risotto.jpg",
+        "category": "vegetarian",
+        "price": 19.5,
+        "quantity": 200,
+        "country": "Italy",
+        "short_description": "Savor the rich and earthy flavors of our Mushroom Risotto, featuring Arborio rice cooked to creamy perfection with a medley of mushrooms and Parmesan cheese."
+    },
+    {
+        "id": "102",
+        "name": "Vegetable Stir-Fry Medley",
+        "image": "https://example.com/vegetable-stir-fry-medley.jpg",
+        "category": "vegetarian",
+        "price": 16.8,
+        "quantity": 180,
+        "country": "China",
+        "short_description": "Experience the vibrant colors and flavors of our Vegetable Stir-Fry Medley, featuring an assortment of fresh vegetables wok-tossed to perfection in a savory soy-ginger sauce."
+    },
+    {
+        "id": "103",
+        "name": "Caprese Salad Perfection",
+        "image": "https://example.com/caprese-salad-perfection.jpg",
+        "category": "vegetarian",
+        "price": 14.2,
+        "quantity": 190,
+        "country": "Italy",
+        "short_description": "Indulge in perfection with our Caprese Salad, featuring ripe tomatoes, fresh mozzarella, and basil drizzled with balsamic glaze."
+    },
+    {
+        "id": "104",
+        "name": "Quinoa and Roasted Vegetable Bowl",
+        "image": "https://example.com/quinoa-roasted-vegetable-bowl.jpg",
+        "category": "vegetarian",
+        "price": 18.0,
+        "quantity": 210,
+        "country": "United States",
+        "short_description": "Embrace health and flavor with our Quinoa and Roasted Vegetable Bowl, featuring a hearty mix of quinoa, roasted vegetables, and a zesty lemon-tahini dressing."
+    },
+    {
+        "id": "105",
+        "name": "Eggplant Parmesan Delight",
+        "image": "https://example.com/eggplant-parmesan-delight.jpg",
+        "category": "vegetarian",
+        "price": 17.5,
+        "quantity": 170,
+        "country": "Italy",
+        "short_description": "Delight in the layers of flavor with our Eggplant Parmesan, featuring thinly sliced eggplant baked with marinara sauce and melted mozzarella, served with spaghetti."
+    },
+    {
+        "id": "106",
+        "name": "Vegetarian Sushi Roll Sampler",
+        "image": "https://example.com/vegetarian-sushi-roll-sampler.jpg",
+        "category": "vegetarian",
+        "price": 22.2,
+        "quantity": 200,
+        "country": "Japan",
+        "short_description": "Experience the art of sushi with our Vegetarian Sushi Roll Sampler, featuring a variety of rolls filled with avocado, cucumber, and other fresh vegetables."
+    },
+    {
+        "id": "107",
+        "name": "Chickpea and Spinach Curry",
+        "image": "https://example.com/chickpea-spinach-curry.jpg",
+        "category": "vegetarian",
+        "price": 20.5,
+        "quantity": 180,
+        "country": "India",
+        "short_description": "Satisfy your taste buds with our Chickpea and Spinach Curry, featuring chickpeas and spinach cooked in a flavorful blend of Indian spices, served with basmati rice."
+    },
+    {
+        "id": "108",
+        "name": "Vegetarian Pad Thai",
+        "image": "https://example.com/vegetarian-pad-thai.jpg",
+        "category": "vegetarian",
+        "price": 16.7,
+        "quantity": 190,
+        "country": "Thailand",
+        "short_description": "Delight in the bold flavors of our Vegetarian Pad Thai, featuring rice noodles stir-fried with tofu, bean sprouts, peanuts, and a tangy tamarind sauce."
+    },
+    {
+        "id": "109",
+        "name": "Butternut Squash Ravioli",
+        "image": "https://example.com/butternut-squash-ravioli.jpg",
+        "category": "vegetarian",
+        "price": 21.0,
+        "quantity": 200,
+        "country": "Italy",
+        "short_description": "Indulge in the sweetness of our Butternut Squash Ravioli, featuring delicate pasta filled with roasted butternut squash and sage brown butter sauce."
+    },
+    {
+        "id": "110",
+        "name": "Mediterranean Quinoa Salad",
+        "image": "https://example.com/mediterranean-quinoa-salad.jpg",
+        "category": "vegetarian",
+        "price": 15.8,
+        "quantity": 210,
+        "country": "Greece",
+        "short_description": "Transport your taste buds to the Mediterranean with our Quinoa Salad, featuring quinoa tossed with tomatoes, cucumbers, olives, and feta cheese in a lemon vinaigrette."
+    },
+    {
+        "id": "111",
+        "name": "Grilled Salmon Salad",
+        "image": "https://example.com/grilled-salmon-salad.jpg",
+        "category": "healthy_option",
+        "price": 18.5,
+        "quantity": 200,
+        "country": "United States",
+        "short_description": "Savor the goodness of our Grilled Salmon Salad, featuring fresh grilled salmon atop a bed of mixed greens, cherry tomatoes, cucumber, and a light lemon vinaigrette."
+    },
+    {
+        "id": "112",
+        "name": "Quinoa Power Bowl",
+        "image": "https://example.com/quinoa-power-bowl.jpg",
+        "category": "healthy_option",
+        "price": 16.8,
+        "quantity": 180,
+        "country": "Peru",
+        "short_description": "Fuel your day with our Quinoa Power Bowl, packed with protein-rich quinoa, grilled chicken, avocado, black beans, and a drizzle of cilantro-lime dressing."
+    },
+    {
+        "id": "113",
+        "name": "Vegan Buddha Bowl",
+        "image": "https://example.com/vegan-buddha-bowl.jpg",
+        "category": "healthy_option",
+        "price": 15.2,
+        "quantity": 190,
+        "country": "Global",
+        "short_description": "Nourish your body with our Vegan Buddha Bowl, featuring a colorful array of roasted vegetables, quinoa, hummus, and a tahini dressing for a wholesome plant-based meal."
+    },
+    {
+        "id": "114",
+        "name": "Turkey and Avocado Wrap",
+        "image": "https://example.com/turkey-avocado-wrap.jpg",
+        "category": "healthy_option",
+        "price": 14.5,
+        "quantity": 210,
+        "country": "United States",
+        "short_description": "Enjoy a light and satisfying meal with our Turkey and Avocado Wrap, featuring lean turkey, avocado, lettuce, and tomato wrapped in a whole-grain tortilla."
+    },
+    {
+        "id": "115",
+        "name": "Mango Coconut Chia Pudding",
+        "image": "https://example.com/mango-coconut-chia-pudding.jpg",
+        "category": "healthy_option",
+        "price": 12.0,
+        "quantity": 170,
+        "country": "Global",
+        "short_description": "Indulge in a sweet and healthy treat with our Mango Coconut Chia Pudding, made with chia seeds, coconut milk, fresh mango, and a hint of agave syrup."
+    },
+    {
+        "id": "116",
+        "name": "Grilled Chicken and Quinoa Salad",
+        "image": "https://example.com/grilled-chicken-quinoa-salad.jpg",
+        "category": "healthy_option",
+        "price": 17.7,
+        "quantity": 200,
+        "country": "United States",
+        "short_description": "Elevate your lunch with our Grilled Chicken and Quinoa Salad, featuring tender grilled chicken breast, quinoa, mixed greens, cherry tomatoes, and a balsamic vinaigrette."
+    },
+    {
+        "id": "117",
+        "name": "Green Smoothie Bliss",
+        "image": "https://example.com/green-smoothie-bliss.jpg",
+        "category": "healthy_option",
+        "price": 10.5,
+        "quantity": 180,
+        "country": "Global",
+        "short_description": "Start your day right with our Green Smoothie Bliss, a refreshing blend of spinach, kale, banana, pineapple, and coconut water for a nutrient-packed delight."
+    },
+    {
+        "id": "118",
+        "name": "Sweet Potato and Chickpea Buddha Bowl",
+        "image": "https://example.com/sweet-potato-chickpea-buddha-bowl.jpg",
+        "category": "healthy_option",
+        "price": 16.5,
+        "quantity": 190,
+        "country": "Global",
+        "short_description": "Nourish your body with our Sweet Potato and Chickpea Buddha Bowl, featuring roasted sweet potatoes, spiced chickpeas, kale, and a creamy tahini dressing."
+    },
+    {
+        "id": "119",
+        "name": "Tuna and Avocado Salad",
+        "image": "https://example.com/tuna-avocado-salad.jpg",
+        "category": "healthy_option",
+        "price": 15.2,
+        "quantity": 200,
+        "country": "Global",
+        "short_description": "Enjoy a protein-packed lunch with our Tuna and Avocado Salad, featuring flaked tuna, avocado, mixed greens, cherry tomatoes, and a zesty citrus dressing."
+    },
+    {
+        "id": "120",
+        "name": "Roasted Vegetable Quinoa Bowl",
+        "image": "https://example.com/roasted-vegetable-quinoa-bowl.jpg",
+        "category": "healthy_option",
+        "price": 18.0,
+        "quantity": 210,
+        "country": "Global",
+        "short_description": "Delight in the goodness of our Roasted Vegetable Quinoa Bowl, featuring a medley of roasted vegetables, quinoa, and a lemon herb dressing for a wholesome meal."
+    },
+    {
+        "id": "121",
+        "name": "Mediterranean Platter",
+        "image": "https://example.com/mediterranean-platter.jpg",
+        "category": "popular_food",
+        "price": 22.5,
+        "quantity": 180,
+        "country": "Greece",
+        "short_description": "Experience the flavors of the Mediterranean with our platter featuring hummus, falafel, tzatziki, olives, and grilled pita bread."
+    },
+    {
+        "id": "122",
+        "name": "Surf and Turf Extravaganza",
+        "image": "https://example.com/surf-and-turf-extravaganza.jpg",
+        "category": "popular_food",
+        "price": 32.0,
+        "quantity": 200,
+        "country": "United States",
+        "short_description": "Indulge in a culinary delight with our Surf and Turf Extravaganza, featuring a perfectly grilled steak paired with succulent shrimp, served with garlic mashed potatoes."
+    },
+    {
+        "id": "123",
+        "name": "Supreme Pizza Feast",
+        "image": "https://example.com/supreme-pizza-feast.jpg",
+        "category": "popular_food",
+        "price": 18.9,
+        "quantity": 190,
+        "country": "Italy",
+        "short_description": "Satisfy your pizza cravings with our Supreme Pizza Feast, loaded with pepperoni, sausage, bell peppers, onions, olives, and gooey melted cheese."
+    },
+    {
+        "id": "124",
+        "name": "Gourmet Burger Bliss",
+        "image": "https://example.com/gourmet-burger-bliss.jpg",
+        "category": "popular_food",
+        "price": 15.5,
+        "quantity": 210,
+        "country": "United States",
+        "short_description": "Delight your taste buds with our Gourmet Burger Bliss, featuring a juicy beef patty, truffle aioli, caramelized onions, and Swiss cheese on a brioche bun."
+    },
+    {
+        "id": "125",
+        "name": "Decadent Chocolate Lava Cake",
+        "image": "https://example.com/decadent-chocolate-lava-cake.jpg",
+        "category": "popular_food",
+        "price": 12.8,
+        "quantity": 170,
+        "country": "Global",
+        "short_description": "Indulge in decadence with our Chocolate Lava Cake, a rich and gooey dessert masterpiece served with a scoop of vanilla ice cream."
+    },
+    {
+        "id": "126",
+        "name": "Tropical Fruit Smoothie",
+        "image": "https://example.com/tropical-fruit-smoothie.jpg",
+        "category": "popular_food",
+        "price": 9.5,
+        "quantity": 180,
+        "country": "Global",
+        "short_description": "Quench your thirst with our Tropical Fruit Smoothie, a refreshing blend of pineapple, mango, banana, and coconut water."
+    },
+    {
+        "id": "127",
+        "name": "Seafood Paella Fiesta",
+        "image": "https://example.com/seafood-paella-fiesta.jpg",
+        "category": "popular_food",
+        "price": 26.5,
+        "quantity": 200,
+        "country": "Spain",
+        "short_description": "Celebrate with our Seafood Paella Fiesta, a vibrant dish filled with a variety of fresh seafood, saffron-infused rice, and aromatic spices."
+    },
+    {
+        "id": "128",
+        "name": "Savory Chicken Alfredo Pasta",
+        "image": "https://example.com/savory-chicken-alfredo-pasta.jpg",
+        "category": "popular_food",
+        "price": 20.7,
+        "quantity": 190,
+        "country": "Italy",
+        "short_description": "Enjoy a classic with our Savory Chicken Alfredo Pasta, featuring tender chicken, fettuccine, and a creamy Alfredo sauce topped with Parmesan cheese."
+    },
+    {
+        "id": "129",
+        "name": "Exotic Mango Sorbet",
+        "image": "https://example.com/exotic-mango-sorbet.jpg",
+        "category": "popular_food",
+        "price": 10.2,
+        "quantity": 200,
+        "country": "Global",
+        "short_description": "Cool down with our Exotic Mango Sorbet, a tropical delight made with real mangoes for a refreshing and fruity dessert experience."
+    },
+    {
+        "id": "130",
+        "name": "Vegetarian Delight Platter",
+        "image": "https://example.com/vegetarian-delight-platter.jpg",
+        "category": "popular_food",
+        "price": 19.8,
+        "quantity": 210,
+        "country": "Global",
+        "short_description": "Satisfy every palate with our Vegetarian Delight Platter, featuring an assortment of gourmet vegetarian dishes, from stuffed mushrooms to quinoa salad."
+    },
+    {
+        "id": "131",
+        "name": "Sushi Spectacular",
+        "image": "https://example.com/sushi-spectacular.jpg",
+        "category": "offer",
+        "price": 24.5,
+        "quantity": 180,
+        "country": "Japan",
+        "short_description": "Explore the art of sushi with our Sushi Spectacular offer! A delightful assortment of nigiri, sashimi, and specialty rolls for a taste of Japan."
+    },
+    {
+        "id": "132",
+        "name": "Parisian Pastry Paradise",
+        "image": "https://example.com/parisian-pastry-paradise.jpg",
+        "category": "offer",
+        "price": 18.0,
+        "quantity": 200,
+        "country": "France",
+        "short_description": "Indulge in the sweetness of Paris with our Parisian Pastry Paradise offer! A selection of exquisite pastries and desserts that capture the essence of France."
+    },
+    {
+        "id": "133",
+        "name": "Tex-Mex Fiesta",
+        "image": "https://example.com/tex-mex-fiesta.jpg",
+        "category": "offer",
+        "price": 22.8,
+        "quantity": 190,
+        "country": "Mexico",
+        "short_description": "Spice up your meal with our Tex-Mex Fiesta offer! Enjoy a vibrant array of tacos, enchiladas, and quesadillas for a taste of Mexico."
+    },
+    {
+        "id": "134",
+        "name": "Greek Goddess Feast",
+        "image": "https://example.com/greek-goddess-feast.jpg",
+        "category": "offer",
+        "price": 26.5,
+        "quantity": 210,
+        "country": "Greece",
+        "short_description": "Embark on a culinary journey to Greece with our Greek Goddess Feast offer! A mezze platter and traditional Greek dishes that embody the flavors of the Mediterranean."
+    },
+    {
+        "id": "135",
+        "name": "Bollywood Biryani Bonanza",
+        "image": "https://example.com/bollywood-biryani-bonanza.jpg",
+        "category": "offer",
+        "price": 19.5,
+        "quantity": 170,
+        "country": "India",
+        "short_description": "Delight in the aromatic spices of India with our Bollywood Biryani Bonanza offer! A spread of biryanis, curries, and naan to transport you to the streets of Mumbai."
+    },
+    {
+        "id": "136",
+        "name": "Mediterranean Seafood Soiree",
+        "image": "https://example.com/mediterranean-seafood-soiree.jpg",
+        "category": "offer",
+        "price": 30.0,
+        "quantity": 180,
+        "country": "Italy",
+        "short_description": "Savor the treasures of the Mediterranean with our Seafood Soiree offer! An indulgent seafood platter featuring the finest catches from the Italian coast."
+    },
+    {
+        "id": "137",
+        "name": "New York Cheesecake Celebration",
+        "image": "https://example.com/new-york-cheesecake-celebration.jpg",
+        "category": "offer",
+        "price": 15.8,
+        "quantity": 200,
+        "country": "United States",
+        "short_description": "Celebrate with our New York Cheesecake offer! A slice of rich and creamy cheesecake, topped with your choice of decadent toppings."
+    },
+    {
+        "id": "138",
+        "name": "Tokyo Ramen Extravaganza",
+        "image": "https://example.com/tokyo-ramen-extravaganza.jpg",
+        "category": "offer",
+        "price": 20.2,
+        "quantity": 190,
+        "country": "Japan",
+        "short_description": "Experience the soul-warming flavors of Tokyo with our Ramen Extravaganza offer! A variety of ramen bowls featuring authentic Japanese ingredients."
+    },
+    {
+        "id": "139",
+        "name": "Istanbul Meze Delight",
+        "image": "https://example.com/istanbul-meze-delight.jpg",
+        "category": "offer",
+        "price": 23.5,
+        "quantity": 200,
+        "country": "Turkey",
+        "short_description": "Dive into the culinary heritage of Istanbul with our Meze Delight offer! A platter of tantalizing meze dishes that capture the essence of Turkish cuisine."
+    },
+    {
+        "id": "140",
+        "name": "Caribbean Carnival Combo",
+        "image": "https://example.com/caribbean-carnival-combo.jpg",
+        "category": "offer",
+        "price": 21.0,
+        "quantity": 210,
+        "country": "Jamaica",
+        "short_description": "Join the Caribbean Carnival with our Combo offer! Jerk chicken, tropical fruit salsa, and flavorful rice dishes that bring the spirit of Jamaica to your table."
+    }              
+]

@@ -19,6 +19,7 @@ const SpecialMenu = () => {
                     alt=""
                 />
             </div>
+            <img className="text-center mx-auto" src="https://i.ibb.co/cNdRzDK/title-icon.png" alt="" />
         </div>
     );
 };
