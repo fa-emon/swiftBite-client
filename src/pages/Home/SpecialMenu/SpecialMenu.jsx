@@ -1,6 +1,29 @@
+import { useEffect, useState } from 'react';
 import './SpecialMenu.css'
+import ShowPopularData from './ShowPopularData';
+import { Button } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 const SpecialMenu = () => {
+    const navigate = useNavigate();
+    const [menu, setMenu] = useState([]);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/menu`)
+            .then(response => response.json())
+            .then(data => {
+                const popularItems = data.filter(item => item.category === 'popular_food');
+
+                const sortedItems = popularItems.sort((a, b) => a.price - b.price);
+                setMenu(sortedItems);
+            })
+    }, [])
+
+    const handleSeeMore = () => {
+        navigate('/menu');
+    }
+
+
     return (
         <div className="mb-32 px-10">
             <p className="text-[#C9AB81] text-4xl small-font text-center">Special Selection</p>
@@ -20,6 +43,21 @@ const SpecialMenu = () => {
                 />
             </div>
             <img className="text-center mx-auto" src="https://i.ibb.co/cNdRzDK/title-icon.png" alt="" />
+
+            {/* {-----display the popular items-----} */}
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12'>
+                {
+                    menu.slice(0, 6).map(popularFood => <ShowPopularData
+                        key={popularFood._id}
+                        popularFood={popularFood}
+                    ></ShowPopularData>)
+                }
+            </div>
+            <div className='flex justify-center'>
+                <Button onClick={handleSeeMore} className='bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded px-2 py-1 mt-16 w-[400px]'>
+                    <span className='tracking-wider heading-font'>See More</span>
+                </Button>
+            </div>
         </div>
     );
 };
