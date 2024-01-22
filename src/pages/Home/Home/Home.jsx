@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import About from "../About/About";
 import Banner from "../Banner/Banner";
 import Blog from "../Blog/Blog";
@@ -12,6 +13,9 @@ import SpecialMenu from "../SpecialMenu/SpecialMenu";
 const Home = () => {
     return (
         <div>
+            <Helmet>
+                <title>swiftBite | Home</title>
+            </Helmet>
             <Banner></Banner>
             <ShortView></ShortView>
             <SpecialMenu></SpecialMenu>
