@@ -17,7 +17,7 @@ const Question = () => {
             <div className="w-3/4 mx-auto mt-4">
                 <input type="email" placeholder="Email Address" className="input input-bordered w-full bg-black text-white" />
             </div>
-            <div className="w-3/4 mx-auto mt-4 bg-black rounded-xl">
+            <div className="w-3/4 mx-auto mt-4 bg-black rounded-xl pb-28">
                 <textarea className="textarea" style={{ background: 'black', color: 'white' }} placeholder="Message"></textarea>
             </div>
         </div>
