@@ -1,28 +1,20 @@
-import { useEffect, useState } from 'react';
 import './SpecialMenu.css'
 import ShowPopularData from './ShowPopularData';
 import { Button } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import useMenu from '../../../hooks/useMenu';
 
 const SpecialMenu = () => {
     const navigate = useNavigate();
-    const [menu, setMenu] = useState([]);
+    const [menu] = useMenu();
 
-    useEffect(() => {
-        fetch(`http://localhost:5000/menu`)
-            .then(response => response.json())
-            .then(data => {
-                const popularItems = data.filter(item => item.category === 'popular_food');
+    const popularItems = menu.filter(item => item.category === 'popular_food');
+    const sortedItems = popularItems.sort((a, b) => a.price - b.price);
 
-                const sortedItems = popularItems.sort((a, b) => a.price - b.price);
-                setMenu(sortedItems);
-            })
-    }, [])
 
     const handleSeeMore = () => {
         navigate('/menu');
     }
-
 
     return (
         <div className="mb-32 px-10">
@@ -47,7 +39,7 @@ const SpecialMenu = () => {
             {/* {-----display the popular items-----} */}
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12'>
                 {
-                    menu.slice(0, 6).map(popularFood => <ShowPopularData
+                    sortedItems.slice(0, 6).map(popularFood => <ShowPopularData
                         key={popularFood._id}
                         popularFood={popularFood}
                     ></ShowPopularData>)
