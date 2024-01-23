@@ -8,6 +8,7 @@ import Contact from "../pages/Contact/Contact";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import Gallery from "../pages/Gallery/Gallery/Gallery";
 import Menu from "../pages/Menu/Menu/Menu";
+import SpecificDetails from "../pages/Menu/SpecificDetails/SpecificDetails";
 
 export const router = createBrowserRouter([
     {
@@ -29,6 +30,13 @@ export const router = createBrowserRouter([
             {
                 path: '/menu',
                 element: <Menu></Menu>
+            },
+            {
+                path: '/menu/category/:id',
+                loader: async ({ params }) => {
+                    return fetch(`http://localhost:5000/menu/category/${params.id}`);
+                },
+                element: <SpecificDetails></SpecificDetails>
             },
             {
                 path: '/about',

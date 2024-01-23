@@ -1,8 +1,13 @@
 import { Button } from "@chakra-ui/react";
-
+import { useNavigate } from "react-router-dom";
 
 const ShowAllData = ({ allData }) => {
+    const navigate = useNavigate();
     const { name, image, category, price, quantity } = allData;
+
+    const handleSeeDetails = (id) => {
+        navigate(`/menu/category/${id}`);
+    }
 
     return (
         <div className="card bg-[#14262D] shadow-xl">
@@ -19,7 +24,7 @@ const ShowAllData = ({ allData }) => {
                     </div>
                 </div>
             </div>
-            <Button className='bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-b-md px-2 py-2'>
+            <Button onClick={() => handleSeeDetails(allData._id)} className='bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-b-md px-2 py-2'>
                     <span className='tracking-wider heading-font uppercase'>See Details</span>
                 </Button>
         </div>
