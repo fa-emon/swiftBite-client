@@ -9,6 +9,7 @@ import AboutUs from "../pages/AboutUs/AboutUs";
 import Gallery from "../pages/Gallery/Gallery/Gallery";
 import Menu from "../pages/Menu/Menu/Menu";
 import SpecificDetails from "../pages/Menu/SpecificDetails/SpecificDetails";
+import Order from "../pages/Order/Order/Order";
 
 export const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
                     return fetch(`http://localhost:5000/menu/category/${params.id}`);
                 },
                 element: <SpecificDetails></SpecificDetails>
+            },
+            {
+                path: '/order',
+                element: <Order></Order>
             },
             {
                 path: '/about',

@@ -1,14 +1,17 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import { Button } from "@chakra-ui/react";
 
 const SpecificDetails = () => {
     const { user } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+
     const specificDetails = useLoaderData();
     const { name, image, category, price, country, short_description } = specificDetails;
 
     const handleOrder = () => {
-
+        navigate('/order', {state: {specificDetails}});
     }
 
     return (
@@ -31,7 +34,7 @@ const SpecificDetails = () => {
                     </div>
                     <p className="paragraph-font text-justify w-3/4 pr-4 mt-4">{short_description}</p>
                     <div className="mr-4 mt-4">
-                        <Button onClick={() => handleOrder()} className='bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md px-2 py-2 w-full'>
+                        <Button onClick={handleOrder} className='bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md px-2 py-2 w-full'>
                             <span className='tracking-wider heading-font uppercase'>Order now</span>
                         </Button>
                     </div>
