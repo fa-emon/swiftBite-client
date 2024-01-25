@@ -1,7 +1,7 @@
 import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
 import { BsFacebook, BsGithub, BsGoogle } from 'react-icons/bs';
-import { AuthContext } from "../../../providers/AuthProvider";
 
 const SocialLogin = () => {
     const { signInWithGoogle } = useContext(AuthContext);
@@ -14,44 +14,25 @@ const SocialLogin = () => {
         signInWithGoogle()
             .then((result) => {
                 const user = result.user;
-                console.log(user);
-
-                fetch("http://localhost:5000/users", {
-                    method: "POST",
-                    headers: {
-                        "Content-type": "application/json",
-                    },
-                    body: JSON.stringify({ name: user?.displayName, email: user?.email }),
-                })
-                    .then((response) => {
-                        if (response.status === 409) {
-                            console.log('User already exists');
-                            // Handle the case where the user already exists, e.g., show a message to the user
-                        } else {
-                            return response.json();
-                        }
-                    })
-                    .then(() => {
-                        navigate(from, { replace: true });
-                    })
+                console.log(user)
+                navigate(from, { replace: true });
             })
             .catch((error) => {
-                console.error('error', error);
-            });
+                console.error('error', error)
+            })
     }
 
     return (
         <div className='text-center'>
             <div className='mt-2'>
-                <button className="btn btn-circle bg-[#C9AB81] hover:bg-[#000000] text-white font-xl mr-2"><BsGoogle onClick={handleWithGoogleSignIn} className='text-base'></BsGoogle></button>
+                <button className="btn btn-circle bg-[#C9AB81] hover:bg-black text-white font-xl mr-2"><BsGoogle onClick={handleWithGoogleSignIn} className='text-base'></BsGoogle></button>
 
                 {/* {These 2 are just demo} */}
-                <button className="btn btn-circle bg-[#C9AB81] hover:bg-[#000000] text-white font-xl me-2"><BsFacebook className='text-base'></BsFacebook></button>
-                <button className="btn btn-circle bg-[#C9AB81] hover:bg-[#000000] text-white font-xl"><BsGithub className='text-base'></BsGithub></button>
+                <button className="btn btn-circle bg-[#C9AB81] hover:bg-black text-white font-xl me-2"><BsFacebook className='text-base'></BsFacebook></button>
+                <button className="btn btn-circle bg-[#C9AB81] hover:bg-black text-white font-xl"><BsGithub className='text-base'></BsGithub></button>
             </div>
         </div>
     );
 };
-
 
 export default SocialLogin;

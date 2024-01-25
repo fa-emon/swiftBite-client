@@ -1,11 +1,10 @@
-import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import { Button } from "@chakra-ui/react";
 
 const SpecificDetails = () => {
     const { user } = useAuth();
     const navigate = useNavigate();
-    const location = useLocation();
 
     const specificDetails = useLoaderData();
     const { name, image, category, price, country, short_description } = specificDetails;

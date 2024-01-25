@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import { IoCart } from "react-icons/io5";
+// import { IoCart } from "react-icons/io5";
 import { BiSolidUserCircle } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
@@ -33,20 +33,10 @@ const NavBar = () => {
         {
             user ?
                 <>
-                    {
-                        user ?
-                            <>
-                                <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={isAdmin ? '/dashboard/adminHome' : '/dashboard/userHome'}>Dashboard</Link></li>
-                                <li><button onClick={handleLogOut} className="btn btn-ghost btn-sm heading-font hover:bg-[#C9AB81] hover:text-black tracking-wide">LogOut</button></li>
-                            </>
-                            :
-                            <>
-                                <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={isAdmin ? '/dashboard/adminHome' : '/dashboard/userHome'}>Dashboard</Link></li>
-                                <li><div><Link className="badge bg-[#C9AB81] text-white border-[#DD6E8B]" to={'/dashboard/myCart'}><IoCart className="text-lg me-2"></IoCart>+{cart.length || 0}</Link></div></li>
-                                <li><button onClick={handleLogOut} className="btn btn-ghost btn-sm heading-font hover:bg-[#C9AB81] hover:text-black tracking-wide">LogOut</button></li>
-                            </>
-                    }
-                </> :
+                    <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={'*'}>Dashboard</Link></li>
+                    <li><Link onClick={handleLogOut} className="heading-font hover:bg-[#C9AB81] hover:text-black tracking-wide ">LogOut</Link></li>
+                </>
+                :
                 <>
                     <li><Link className="hover:bg-[#C9AB81] hover:text-black" to={'/login'}>Log In</Link></li>
                     <li><Link className="hover:bg-[#C9AB81] hover:text-black" to={'/register'}>Sign Up</Link></li>

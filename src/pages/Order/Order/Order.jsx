@@ -1,9 +1,11 @@
 import { useForm } from "react-hook-form";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
+import Swal from "sweetalert2";
 
 const Order = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const specificDetails = location.state?.specificDetails;
     const { user } = useAuth();
 
@@ -12,6 +14,44 @@ const Order = () => {
 
     const onSubmit = (data) => {
         console.log(data)
+        if (user) {
+            fetch('http://localhost:5000/order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.insertedId) {
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: "Your order has been successful",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        reset()
+                    } else {
+                        Swal.fire({
+                            title: "Please login to order the food",
+                            icon: "warning",
+                            showCancelButton: true,
+                            confirmButtonColor: "#3085d6",
+                            cancelButtonColor: "#d33",
+                            confirmButtonText: "Login Now!"
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                navigate('/login', { state: { from: location } });
+                            }
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error submitting order:', error);
+                });
+        }
     }
 
     return (
@@ -31,7 +71,7 @@ const Order = () => {
                                     className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]"
                                     type="text"
                                     placeholder="Food Name"
-                                    {...register("name", { required: true, maxLength: 80 })}
+                                    {...register("name", { required: true })}
                                     value={specificDetails.name}
                                     readOnly
                                 />
@@ -49,7 +89,6 @@ const Order = () => {
                                 <input
                                     type="text"
                                     {...register('image', { required: true })}
-                                    placeholder="Photo URL"
                                     className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]"
                                     value={specificDetails.image}
                                     readOnly
@@ -66,8 +105,9 @@ const Order = () => {
                                     <span className="text-white">Price</span>
                                 </div>
                                 <input
-                                    className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]"
                                     type="number"
+                                    {...register('price', { required: true })}
+                                    className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]"
                                     value={specificDetails.price}
                                     readOnly
                                 />
@@ -86,7 +126,6 @@ const Order = () => {
                                 <input
                                     type="text"
                                     {...register('country', { required: true })}
-                                    placeholder="Country"
                                     className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]"
                                     readOnly
                                     value={specificDetails.country}
@@ -102,11 +141,11 @@ const Order = () => {
                                 <label className="label">
                                     <span className="text-white">Buyer Name</span>
                                 </label>
-                                <input type="number"
-                                    {...register('available_seats', { required: true })}
+                                <input type="text"
+                                    {...register('buyer_name', { required: true })}
                                     className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]"
-                                    value={user?.displayName}
                                     readOnly
+                                    value={user?.displayName}
                                 />
                             </div>
 
@@ -116,7 +155,8 @@ const Order = () => {
                                 <div className="label">
                                     <span className="text-white">Buyer Email</span>
                                 </div>
-                                <input className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" type="email"
+                                <input className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]"
+                                    {...register('buyer_email', { required: true })} type="email"
                                     value={user?.email}
                                     readOnly
                                 />
@@ -134,7 +174,7 @@ const Order = () => {
                                         <input type="text"
                                             value={specificDetails.category}
                                             readOnly
-                                            placeholder="0" className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" />
+                                            {...register('category', { required: true })} className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" />
                                     </div>
                                 </div>
 
@@ -161,11 +201,12 @@ const Order = () => {
 
                                 <div className="w-full">
                                     <textarea className="textarea bg-[#202020] text-[#C9AB81] w-full textarea-md"
+                                        {...register('details', { required: true })}
                                         value={specificDetails.short_description}
                                         readOnly
                                     ></textarea>
 
-                                    {errors.short_description && <p className='text-red-600'>course details is required!.</p>}
+                                    {errors.details && <p className='text-red-600'>course details is required!.</p>}
                                 </div>
                             </div>
                         </div>

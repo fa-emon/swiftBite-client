@@ -8,12 +8,12 @@ import { HelmetProvider } from 'react-helmet-async';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HelmetProvider>
-      <AuthProvider>
+    <AuthProvider>
+      <HelmetProvider>
         <div className='bg-[#0B1315]'>
           <RouterProvider router={router}></RouterProvider>
         </div>
-      </AuthProvider>
-    </HelmetProvider>
+      </HelmetProvider>
+    </AuthProvider>
   </React.StrictMode>,
 )

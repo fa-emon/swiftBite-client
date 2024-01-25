@@ -44,38 +44,11 @@ const Register = () => {
                             showConfirmButton: false,
                             timer: 1500
                         })
-
-                        fetch("http://localhost:5000/users", {
-                            method: "POST",
-                            headers: {
-                                "Content-type": "application/json"
-                            },
-                            body: JSON.stringify({ name: data.name, email: data.email }),
-                        })
-                            .then((response) => response.json())
-                            .then((databaseData) => {
-                                // setUser({ ...loggedUser, ...data })
-                                console.log(databaseData)
-
-                                if (databaseData.insertedId) {
-                                    Swal.fire({
-                                        position: 'top-end',
-                                        icon: 'success',
-                                        title: 'User Added into database Successfully!',
-                                        showConfirmButton: false,
-                                        timer: 1500
-                                    })
-                                }
-                            });
-
-                        navigate("/");
+                        navigate('/')
                     })
                     .catch((error) => {
                         console.error('Error updating user profile:', error);
                     })
-            })
-            .catch((error) => {
-                console.error('error', error)
             })
     }
 
