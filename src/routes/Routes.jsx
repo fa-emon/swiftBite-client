@@ -10,6 +10,8 @@ import Gallery from "../pages/Gallery/Gallery/Gallery";
 import Menu from "../pages/Menu/Menu/Menu";
 import SpecificDetails from "../pages/Menu/SpecificDetails/SpecificDetails";
 import Order from "../pages/Order/Order/Order";
+import Dashboard from "../layout/Dashboard";
+import MyOrder from "../pages/Dashboard/MyOrder/MyOrder";
 
 export const router = createBrowserRouter([
     {
@@ -58,6 +60,16 @@ export const router = createBrowserRouter([
             {
                 path: '*',
                 element: <ErrorPage></ErrorPage>
+            }
+        ]
+    },
+    {
+        path: 'dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
+            {
+                path: 'myOrder',
+                element: <MyOrder></MyOrder>
             }
         ]
     }

@@ -2,12 +2,14 @@ import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import Swal from "sweetalert2";
+import useOrder from "../../../hooks/useOrder";
 
 const Order = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const specificDetails = location.state?.specificDetails;
     const { user } = useAuth();
+    const [, refetch] = useOrder();
 
     const { register, handleSubmit, formState: { errors },
         reset } = useForm()
@@ -15,6 +17,7 @@ const Order = () => {
     const onSubmit = (data) => {
         console.log(data)
         if (user) {
+            
             fetch('http://localhost:5000/order', {
                 method: 'POST',
                 headers: {
@@ -25,6 +28,7 @@ const Order = () => {
                 .then(response => response.json())
                 .then(data => {
                     if (data.insertedId) {
+                        refetch();
                         Swal.fire({
                             position: "top-end",
                             icon: "success",
@@ -33,6 +37,7 @@ const Order = () => {
                             timer: 1500
                         });
                         reset()
+                        navigate('/menu')
                     } else {
                         Swal.fire({
                             title: "Please login to order the food",
@@ -72,7 +77,7 @@ const Order = () => {
                                     type="text"
                                     placeholder="Food Name"
                                     {...register("name", { required: true })}
-                                    value={specificDetails.name}
+                                    value={specificDetails?.name}
                                     readOnly
                                 />
 
@@ -90,7 +95,7 @@ const Order = () => {
                                     type="text"
                                     {...register('image', { required: true })}
                                     className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]"
-                                    value={specificDetails.image}
+                                    value={specificDetails?.image}
                                     readOnly
                                 />
                                 {errors.image && <p className='text-red-600'>Photo URL is required!.</p>}
@@ -108,7 +113,7 @@ const Order = () => {
                                     type="number"
                                     {...register('price', { required: true })}
                                     className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]"
-                                    value={specificDetails.price}
+                                    value={specificDetails?.price}
                                     readOnly
                                 />
 
@@ -128,7 +133,7 @@ const Order = () => {
                                     {...register('country', { required: true })}
                                     className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]"
                                     readOnly
-                                    value={specificDetails.country}
+                                    value={specificDetails?.country}
                                 />
                                 {errors.country && <p className='text-red-600'>Country is required!.</p>}
                             </div>
@@ -172,7 +177,7 @@ const Order = () => {
                                     </div>
                                     <div className="">
                                         <input type="text"
-                                            value={specificDetails.category}
+                                            value={specificDetails?.category}
                                             readOnly
                                             {...register('category', { required: true })} className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" />
                                     </div>
@@ -202,7 +207,7 @@ const Order = () => {
                                 <div className="w-full">
                                     <textarea className="textarea bg-[#202020] text-[#C9AB81] w-full textarea-md"
                                         {...register('details', { required: true })}
-                                        value={specificDetails.short_description}
+                                        value={specificDetails?.short_description}
                                         readOnly
                                     ></textarea>
 
