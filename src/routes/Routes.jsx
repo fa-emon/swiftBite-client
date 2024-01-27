@@ -12,6 +12,9 @@ import SpecificDetails from "../pages/Menu/SpecificDetails/SpecificDetails";
 import Order from "../pages/Order/Order/Order";
 import Dashboard from "../layout/Dashboard";
 import MyOrder from "../pages/Dashboard/MyOrder/MyOrder";
+import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
+import AddItem from "../pages/Dashboard/AddItem/AddItem";
+import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
     {
@@ -70,6 +73,14 @@ export const router = createBrowserRouter([
             {
                 path: 'myOrder',
                 element: <MyOrder></MyOrder>
+            },
+            {
+                path: 'allusers',
+                element: <AllUsers></AllUsers>
+            },
+            {
+                path: 'addItem',
+                element: <AdminRoute><AddItem></AddItem></AdminRoute>
             }
         ]
     }

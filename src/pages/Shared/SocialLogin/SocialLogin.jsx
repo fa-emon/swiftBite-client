@@ -15,7 +15,20 @@ const SocialLogin = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user)
-                navigate(from, { replace: true });
+
+                const saveUser = { name: user.displayName, email: user.email }
+
+                fetch("http://localhost:5000/user", {
+                    method: "POST",
+                    body: JSON.stringify(saveUser),
+                    headers: {
+                        "Content-type": "application/json"
+                    }
+                })
+                    .then((response) => response.json())
+                    .then(() => {
+                        navigate(from, { replace: true });
+                    });
             })
             .catch((error) => {
                 console.error('error', error)

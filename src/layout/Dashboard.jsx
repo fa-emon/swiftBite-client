@@ -9,13 +9,13 @@ import { TiThMenu } from "react-icons/ti";
 import { GrGallery } from "react-icons/gr";
 import { FaBlog } from "react-icons/fa";
 import { PiFinnTheHumanFill } from "react-icons/pi";
-// import { PiUsersThreeFill } from "react-icons/pi";
-// import { FaUserShield } from "react-icons/fa6";
-// import { FaRegFaceSmile } from "react-icons/fa6";
-// import { SiGoogletagmanager } from "react-icons/si";
-// import { MdOutlineFaceRetouchingNatural } from "react-icons/md"
-// import useAdmin from "../hooks/useAdmin";
+import { FaUsers } from "react-icons/fa";
+import { ImSpoonKnife } from "react-icons/im";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiFillHome } from "react-icons/ai";
+import { BiSolidBookBookmark } from "react-icons/bi";
 import useOrder from "../hooks/useOrder";
+import useAdmin from "../hooks/useAdmin";
 
 
 const Dashboard = () => {
@@ -24,7 +24,7 @@ const Dashboard = () => {
     // TODO: load data from the server to have dynamic isAdmin on data.
     // const isAdmin = true;
 
-    // const [isAdmin] = useAdmin();
+    const [isAdmin] = useAdmin();
 
     return (
         <div className="drawer lg:drawer-open">
@@ -40,23 +40,44 @@ const Dashboard = () => {
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 min-h-full text-base-content heading-font tracking-wide">
                     {/* Sidebar content here */}
-                    <>
-                        <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
-                            <Link to={'/dashboard/userHome'}><IoHome className="text-lg" />USER HOME</Link>
-                        </li>
-                        <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
-                            <Link><SlCalender className="text-lg" />RESERVATION</Link>
-                        </li>
-                        <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
-                            <Link><IoWalletSharp className="text-lg" />PAYMENT HISTORY</Link>
-                        </li>
-                        <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
-                            <Link to={'/dashboard/myOrder'}><FaShoppingCart className="text-lg" />MY ORDER<div className="badge bg-black hover:bg-[#C9AB81] text-white hover:text-black border-[#C9AB81]">+{order.length || 0}</div></Link>
-                        </li>
-                        <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
-                            <Link><FaSwatchbook className="text-lg" />MY BOOKING HISTORY</Link>
-                        </li>
-                    </>
+                    {
+                        isAdmin ?
+                            <>
+                                <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
+                                    <Link to={'/dashboard/adminHome'}><AiFillHome className="text-lg" />ADMIN HOME</Link>
+                                </li>
+                                <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
+                                    <Link to={'/dashboard/addItems'}><ImSpoonKnife className="text-lg" />ADD ITEMS</Link>
+                                </li>
+                                <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
+                                    <Link to={'/dashboard/manageItems'}><GiHamburgerMenu className="text-lg" />MANAGE ITEMS</Link>
+                                </li>
+                                <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
+                                    <Link to={'/dashboard/manageBookings'}><BiSolidBookBookmark className="text-lg" />MANAGE BOOKINGS</Link>
+                                </li>
+                                <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
+                                    <Link to={'/dashboard/allusers'}><FaUsers className="text-lg" />ALL USERS</Link>
+                                </li>
+                            </>
+                            :
+                            <>
+                                <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
+                                    <Link to={'/dashboard/userHome'}><IoHome className="text-lg" />USER HOME</Link>
+                                </li>
+                                <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
+                                    <Link><SlCalender className="text-lg" />RESERVATION</Link>
+                                </li>
+                                <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
+                                    <Link><IoWalletSharp className="text-lg" />PAYMENT HISTORY</Link>
+                                </li>
+                                <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
+                                    <Link to={'/dashboard/myOrder'}><FaShoppingCart className="text-lg" />MY ORDER<div className="badge bg-black hover:bg-[#C9AB81] text-white hover:text-black border-[#C9AB81]">+{order.length || 0}</div></Link>
+                                </li>
+                                <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
+                                    <Link><FaSwatchbook className="text-lg" />MY BOOKING HISTORY</Link>
+                                </li>
+                            </>
+                    }
 
                     <hr style={{ backgroundColor: 'black', height: '2px', border: 'none', marginTop: '10px', marginBottom: '10px' }} />
 

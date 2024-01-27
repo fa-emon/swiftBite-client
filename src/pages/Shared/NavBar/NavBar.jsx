@@ -7,6 +7,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 import { GiSpoon } from "react-icons/gi";
 import { IoCart } from "react-icons/io5";
 import useOrder from '../../../hooks/useOrder';
+// import useAdmin from '../../../hooks/useAdmin';
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -79,7 +80,7 @@ const NavBar = () => {
                         <>
                             <div className="tooltip tooltip-left all-font" data-tip={user?.displayName}>
                                 <img
-                                    src={user?.photoURL} // Replace with the actual image path
+                                    src={user?.photoURL}
                                     alt="User Profile"
                                     className="w-10 h-10 rounded-full mr-2"
                                 />

@@ -35,16 +35,29 @@ const Register = () => {
                 //After user creation, update their profile
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
-                        console.log('User Profile Updated Successfully.')
-                        reset();
-                        Swal.fire({
-                            position: 'top-end',
-                            icon: 'success',
-                            title: 'User Profile Updated Successfully.',
-                            showConfirmButton: false,
-                            timer: 1500
+                        const saveUser = { name: data.name, email: data.email }
+
+                        fetch("http://localhost:5000/user", {
+                            method: "POST",
+                            body: JSON.stringify(saveUser),
+                            headers: {
+                                "Content-type": "application/json"
+                            }
                         })
-                        navigate('/')
+                            .then((response) => response.json())
+                            .then((data) => {
+                                if (data.insertedId) {
+                                    reset();
+                                    Swal.fire({
+                                        position: 'top-end',
+                                        icon: 'success',
+                                        title: 'User Profile Updated Successfully.',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    })
+                                    navigate('/')
+                                }
+                            });
                     })
                     .catch((error) => {
                         console.error('Error updating user profile:', error);
