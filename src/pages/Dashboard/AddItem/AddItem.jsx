@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import useAuth from "../../../hooks/useAuth";
 
 
 const AddItem = () => {
@@ -8,11 +9,12 @@ const AddItem = () => {
         reset } = useForm()
 
     const [axiosSecure] = useAxiosSecure();
+    const { user } = useAuth();
 
     const onSubmit = (data) => {
-        const { name, image, price, ratings, category, instructor_name, instructor_email, instructor_image, short_description, available_seats, students_enrolled } = data;
+        const { name, image, price, category, admin_name, admin_email, short_description, quantity, country } = data;
 
-        const newData = { name, image, price: parseFloat(price), ratings: parseFloat(ratings), category, instructor_name, instructor_image, instructor_email, short_description, available_seats: parseFloat(available_seats), students_enrolled: parseFloat(students_enrolled) }
+        const newData = { name, image, price: parseFloat(price), quantity: parseFloat(quantity), category, short_description, country, admin_email, admin_name }
 
         axiosSecure.post('/menu', newData)
             .then(data => {
@@ -21,7 +23,7 @@ const AddItem = () => {
                     Swal.fire({
                         position: "top-end",
                         icon: "success",
-                        title: "one item added successfully!",
+                        title: "One item added successfully!",
                         showConfirmButton: false,
                         timer: 1500
                     });
@@ -31,20 +33,34 @@ const AddItem = () => {
 
     return (
         <>
-            <h2 className="text-center text-[#C9AB81] heading-font my-4 tracking-[.5rem] text-xl bg-[#0a0a0a] py-2 rounded-md">ADD A NEW FOOD</h2>
+            <div className="flex items-center justify-center w-full">
+                <img className="wobble-hor-bottom" style={{ height: '20vh', width: '20vh', objectFit: 'contain' }} src="https://i.ibb.co/jhs65zG/vecteezy-aesthetic-flower-plant-leaves-10869705.png" alt="" />
+                <p className="text-center text-[#C9AB81] text-5xl heading-font"> <span className="text-white">ADD A</span> NEW ITEM</p>
+                <img
+                    className="wobble-and-rotate"
+                    style={{
+                        height: '20vh',
+                        width: '20vh',
+                        objectFit: 'contain',
+                        transform: 'scaleX(-1)',
+                    }}
+                    src="https://i.ibb.co/jhs65zG/vecteezy-aesthetic-flower-plant-leaves-10869705.png"
+                    alt=""
+                />
+            </div>
 
             <div className="mb-10 heading-font tracking-wide bg-[#0a0a0a] px-5 pt-2 pb-6 rounded-md">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="flex w-full gap-6">
-                        {/* {Course Name field} */}
+                        {/* {Food Name field} */}
                         <div className="mb-6 text-black w-full">
                             <div className="label">
-                                <span className="text-[#C9AB81]">Course Name</span>
+                                <span className="text-[#C9AB81]">Food Name</span>
                             </div>
-                            <input className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" type="text" placeholder="Course Name" {...register("name", { required: true, maxLength: 80 })} />
+                            <input className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" type="text" placeholder="Food Name" {...register("name", { required: true, maxLength: 80 })} />
 
                             {errors.name?.type === "required" && (
-                                <p className="text-red-600">course name is required!</p>
+                                <p className="text-red-600">food name is required!</p>
                             )}
                         </div>
 
@@ -55,130 +71,111 @@ const AddItem = () => {
                             </label>
                             <input type="text"
                                 {...register('image', { required: true })}
-                                placeholder="photo URL" className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" />
+                                placeholder="Photo URL" className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" />
                             {errors.image && <p className='text-red-600'>photo URL is required!.</p>}
                         </div>
                     </div>
 
-                    <div className="flex w-full gap-6">
-                        {/* {Instructor Name field} */}
-                        <div className="mb-6 text-black w-full">
-                            <div className="label">
-                                <span className="text-[#C9AB81]">Instructor Name</span>
-                            </div>
-                            <input className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" type="text" placeholder="Instructor Name" {...register("instructor_name", { required: true, maxLength: 80 })} />
-
-                            {errors.instructor_name?.type === "required" && (
-                                <p className="text-red-600">instructor name is required!</p>
-                            )}
-                        </div>
-
-                        {/* {Instructor photo URL field} */}
-                        <div className="form-control w-full">
-                            <label className="label">
-                                <span className="text-[#C9AB81]">Photo URL</span>
-                            </label>
-                            <input type="text"
-                                {...register('instructor_image', { required: true })}
-                                placeholder="photo URL" className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" />
-                            {errors.instructor_image && <p className='text-red-600'>photo URL is required!.</p>}
-                        </div>
-                    </div>
-
-                    <div className="flex w-full gap-6">
-                        {/* {Instructor Email field} */}
-                        <div className="mb-6 text-black w-full">
-                            <div className="label">
-                                <span className="text-[#C9AB81]">Instructor Email</span>
-                            </div>
-                            <input className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" type="email" placeholder="Instructor Email" {...register("instructor_email", { required: true, maxLength: 80 })} />
-
-                            {errors.instructor_email?.type === "required" && (
-                                <p className="text-red-600">instructor email is required!</p>
-                            )}
-                        </div>
-
-                        {/* {available_seats field} */}
-                        <div className="form-control w-full">
-                            <label className="label">
-                                <span className="text-[#C9AB81]">Available Seats</span>
-                            </label>
-                            <input type="number"
-                                {...register('available_seats', { required: true })}
-                                placeholder="0" className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" />
-                            {errors.available_seats && <p className='text-red-600'>available seats is required!.</p>}
-                        </div>
-                    </div>
-
-                    <div className="mb-6">
-                        {/* {Choose Category field} */}
-                        <div className="w-full flex gap-6">
-                            <div className="w-full">
-                                <div className="label">
-                                    <span className="text-[#C9AB81]">Choose Category</span>
-                                </div>
-                                <div className="">
-                                    <select className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" {...register("category", { required: true })}>
-                                        <option value="Hair_Makeup">Hair_Makeup</option>
-                                        <option value="Eye_Makeup">Eye_Makeup</option>
-                                        <option value="Wedding_Makeup">Wedding_Makeup</option>
-                                        <option value="Effect_Makeup">Effect_Makeup</option>
-                                        <option value="Face_Makeup">Face_Makeup</option>
-                                        <option value="Fashion_Makeup">Fashion_Makeup</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            {/* {Price field} */}
-                            <div className="w-full">
-                                <div className="label">
-                                    <span className="text-[#C9AB81]">Price</span>
-                                </div>
-                                <input className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" type="number" placeholder="$" {...register("price", { required: true })} />
-
-                                {errors.price?.type === "required" && (
-                                    <p className="text-red-600">price is required!</p>
-                                )}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="flex w-full gap-6">
-                        {/* {Students Enrolled field} */}
-                        <div className="mb-6 text-black w-full">
-                            <div className="label">
-                                <span className="text-[#C9AB81]">Students Enrolled</span>
-                            </div>
-                            <input className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" type="number" placeholder="0" {...register("students_enrolled", { required: true, maxLength: 80 })} />
-
-                            {errors.students_enrolled?.type === "required" && (
-                                <p className="text-red-600">students enrolled is required!</p>
-                            )}
-                        </div>
-
-                        {/* {Ratings field} */}
-                        <div className="form-control w-full">
-                            <label className="label">
-                                <span className="text-[#C9AB81]">Ratings</span>
-                            </label>
-                            <input type="number"
-                                {...register('ratings', { required: true })}
-                                placeholder="0-5" className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" />
-                            {errors.ratings && <p className='text-red-600'>ratings is required!.</p>}
-                        </div>
-                    </div>
-
-                    <div className="mb-6">
-                        {/* {Course Details field} */}
+                    <div className="flex w-full gap-6 mb-6">
+                        {/* {Category field} */}
                         <div className="w-full">
                             <div className="label">
-                                <span className="text-[#C9AB81]">Course Details</span>
+                                <span className="text-[#C9AB81]">Choose Category</span>
+                            </div>
+                            <div className="">
+                                <select className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" {...register("category", { required: true })}>
+                                    <option value="soup">soup</option>
+                                    <option value="drinks">drinks</option>
+                                    <option value="desserts">desserts</option>
+                                    <option value="pizza">pizza</option>
+                                    <option value="salad">salad</option>
+                                    <option value="burger">burger</option>
+                                    <option value="sandwich">sandwich</option>
+                                    <option value="seafood">seafood</option>
+                                    <option value="steak">steak</option>
+                                    <option value="pasta">pasta</option>
+                                    <option value="vegetarian">vegetarian</option>
+                                    <option value="healthy_option">healthy_option</option>
+                                    <option value="popular_food">popular_food</option>
+                                    <option value="offer">offer</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        {/* {Quantity field} */}
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="text-[#C9AB81]">Quantity</span>
+                            </label>
+                            <input type="number"
+                                {...register('quantity', { required: true })}
+                                placeholder="0" className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" />
+                            {errors.quantity && <p className='text-red-600'>quantity is required!.</p>}
+                        </div>
+                    </div>
+
+                    <div className="flex w-full gap-6">
+                        {/* {Country field} */}
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="text-[#C9AB81]">Country</span>
+                            </label>
+                            <input type="text"
+                                {...register('country', { required: true })}
+                                placeholder="Country" className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" />
+                            {errors.country && <p className='text-red-600'>country is required!.</p>}
+                        </div>
+
+                        {/* {Price field} */}
+                        <div className="mb-6 text-black w-full">
+                            <div className="label">
+                                <span className="text-[#C9AB81]">Price</span>
+                            </div>
+                            <input className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" type="number" placeholder="$" {...register("price", { required: true, maxLength: 80 })} />
+
+                            {errors.price?.type === "required" && (
+                                <p className="text-red-600">price is required!</p>
+                            )}
+                        </div>
+                    </div>
+
+                    <div className="flex w-full gap-6">
+                        {/* {Admin Name field} */}
+                        <div className="mb-6 text-black w-full">
+                            <div className="label">
+                                <span className="text-[#C9AB81]">Admin Name</span>
+                            </div>
+                            <input className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]" type="text" placeholder="Admin Name" {...register("admin_name", { required: true, maxLength: 80 })}
+                                readOnly
+                                value={user?.displayName}
+                            />
+                        </div>
+
+                        {/* {Admin Email field} */}
+                        <div className="mb-6 text-black w-full">
+                            <div className="label">
+                                <span className="text-[#C9AB81]">Admin Email</span>
+                            </div>
+                            <input className="w-full py-2 px-4 rounded-md bg-[#202020] text-[#C9AB81]"
+                                {...register('admin_email', { required: true })} type="email"
+
+                                value={user?.email}
+                                readOnly
+                            />
+                        </div>
+                    </div>
+
+                    <div className="mb-6">
+                        {/* {Food Details field} */}
+                        <div className="w-full">
+                            <div className="label">
+                                <span className="text-[#C9AB81]">Food Details</span>
                             </div>
 
                             <div className="w-full">
-                                <textarea className="textarea bg-[#202020] text-[#C9AB81] w-full textarea-md" placeholder="Course Details" {...register("short_description", { required: true })}></textarea>
+                                <textarea className="textarea bg-[#202020] text-[#C9AB81] w-full textarea-md" placeholder="Food Details" {...register("short_description", { required: true })}></textarea>
 
-                                {errors.short_description && <p className='text-red-600'>course details is required!.</p>}
+                                {errors.short_description && <p className='text-red-600'>food details is required!.</p>}
                             </div>
                         </div>
                     </div>
