@@ -7,8 +7,14 @@ import { Button } from '@chakra-ui/react';
 import { FaArrowCircleRight } from 'react-icons/fa';
 import { Box, Typography } from '@mui/material';
 import 'animate.css';
+import { useNavigate } from 'react-router-dom';
 
 const Banner = () => {
+    const navigate = useNavigate();
+    const handleSeeAbout = () => {
+        navigate('/about')
+    }
+
     return (
         <>
             <Swiper
@@ -46,7 +52,7 @@ const Banner = () => {
                                     </Box>
                                 </Typography>
                             </p>
-                            <Button className='bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded px-2 py-1 mt-5' colorScheme='twitter' rightIcon={<FaArrowCircleRight className='' />}>
+                            <Button onClick={handleSeeAbout} className='bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded px-2 py-1 mt-5' colorScheme='twitter' rightIcon={<FaArrowCircleRight className='' />}>
                                 <span className='tracking-wider heading-font'>About SwiftBite</span>
                             </Button>
                         </div>
