@@ -15,9 +15,11 @@ const Order = () => {
         reset } = useForm()
 
     const onSubmit = (data) => {
+        data.price = parseFloat(data.price);
+        data.quantity = parseInt(data.quantity);
         console.log(data)
         if (user) {
-            
+
             fetch('http://localhost:5000/order', {
                 method: 'POST',
                 headers: {
