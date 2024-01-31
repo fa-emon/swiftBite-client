@@ -1,5 +1,4 @@
 import { Box, Typography } from '@mui/material';
-// import { IoCart } from "react-icons/io5";
 import { BiSolidUserCircle } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
@@ -7,14 +6,14 @@ import { AuthContext } from '../../../providers/AuthProvider';
 import { GiSpoon } from "react-icons/gi";
 import { IoCart } from "react-icons/io5";
 import useOrder from '../../../hooks/useOrder';
-// import useAdmin from '../../../hooks/useAdmin';
+import useAdmin from '../../../hooks/useAdmin';
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
     const isUserLoggedIn = !!user;
 
     const [order] = useOrder();
-    // const [isAdmin] = useAdmin();
+    const [isAdmin] = useAdmin();
 
     const handleLogOut = () => {
         logOut()
@@ -36,9 +35,19 @@ const NavBar = () => {
         {
             user ?
                 <>
-                    <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={'/dashboard/myOrder'}>Dashboard</Link></li>
-                    <li><div><Link className="badge bg-[#C9AB81] p-4 text-black border-[#C9AB81]" to={'/dashboard/myCart'}><IoCart className="text-lg text-[#0B1315] me-2"></IoCart>+{order.length || 0}</Link></div></li>
-                    <li><Link onClick={handleLogOut} className="heading-font hover:bg-[#C9AB81] hover:text-black tracking-wide ">LogOut</Link></li>
+                    {
+                        user && isAdmin ?
+                            <>
+                                <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={isAdmin ? '/dashboard/adminHome' : '/dashboard/userHome'}>Dashboard</Link></li>
+                                <li><Link onClick={handleLogOut} className="heading-font hover:bg-[#C9AB81] hover:text-black tracking-wide ">LogOut</Link></li>
+                            </>
+                            :
+                            <>
+                                <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={isAdmin ? '/dashboard/adminHome' : '/dashboard/userHome'}>Dashboard</Link></li>
+                                <li><div><Link className="badge bg-[#C9AB81] p-4 text-black border-[#C9AB81]" to={'/dashboard/myCart'}><IoCart className="text-lg text-[#0B1315] me-2"></IoCart>+{order.length || 0}</Link></div></li>
+                                <li><Link onClick={handleLogOut} className="heading-font hover:bg-[#C9AB81] hover:text-black tracking-wide ">LogOut</Link></li>
+                            </>
+                    }
                 </>
                 :
                 <>
