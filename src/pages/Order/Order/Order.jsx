@@ -17,9 +17,8 @@ const Order = () => {
     const onSubmit = (data) => {
         data.price = parseFloat(data.price);
         data.quantity = parseInt(data.quantity);
-        console.log(data)
-        if (user) {
 
+        if (user) {
             fetch('http://localhost:5000/order', {
                 method: 'POST',
                 headers: {
@@ -40,24 +39,26 @@ const Order = () => {
                         });
                         reset()
                         navigate('/menu')
-                    } else {
-                        Swal.fire({
-                            title: "Please login to order the food",
-                            icon: "warning",
-                            showCancelButton: true,
-                            confirmButtonColor: "#3085d6",
-                            cancelButtonColor: "#d33",
-                            confirmButtonText: "Login Now!"
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                navigate('/login', { state: { from: location } });
-                            }
-                        });
                     }
                 })
                 .catch(error => {
                     console.error('Error submitting order:', error);
                 });
+        }
+
+        else {
+            Swal.fire({
+                title: "Login required for order the food",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Login Now!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/login', { state: { from: location } });
+                }
+            });
         }
     }
 

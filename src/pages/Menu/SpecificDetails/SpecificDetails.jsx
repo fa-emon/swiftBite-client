@@ -1,17 +1,36 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import { Button } from "@chakra-ui/react";
+import Swal from "sweetalert2";
 
 const SpecificDetails = () => {
     const { user } = useAuth();
     const navigate = useNavigate();
+    const location = useLocation();
 
     const specificDetails = useLoaderData();
     const { name, image, category, price, country, short_description } = specificDetails;
 
+
     const handleOrder = () => {
-        navigate('/order', {state: {specificDetails}});
+        if (user?.displayName) {
+            navigate('/order', { state: { specificDetails } });
+        } else {
+            Swal.fire({
+                title: "Login for Orders",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Please Login!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/login', { state: { from: location } });
+                }
+            });
+        }
     }
+
 
     return (
         <div className="w-full mx-auto px-20 pt-44">
