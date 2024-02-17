@@ -31,8 +31,8 @@ const ManageItems = () => {
                             <th>IMAGE</th>
                             <th>FOOD NAME</th>
                             <th>PRICE</th>
-                            <th>ACTION</th>
-                            <th>ACTION</th>
+                            <th>UPDATE</th>
+                            <th>DELETE</th>
                         </tr>
                     </thead>
                     <tbody>

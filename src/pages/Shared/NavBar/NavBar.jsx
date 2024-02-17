@@ -44,7 +44,7 @@ const NavBar = () => {
                             :
                             <>
                                 <li><Link className="hover:bg-[#C9AB81] hover:text-black tracking-wide" to={isAdmin ? '/dashboard/adminHome' : '/dashboard/userHome'}>Dashboard</Link></li>
-                                <li><div><Link className="badge bg-[#C9AB81] p-4 text-black border-[#C9AB81]" to={'/dashboard/myCart'}><IoCart className="text-lg text-[#0B1315] me-2"></IoCart>+{order.length || 0}</Link></div></li>
+                                <li><div><Link className="badge bg-[#C9AB81] p-4 text-black border-[#C9AB81]" to={''}><IoCart className="text-lg text-[#0B1315] me-2"></IoCart>+{order.length || 0}</Link></div></li>
                                 <li><Link onClick={handleLogOut} className="heading-font hover:bg-[#C9AB81] hover:text-black tracking-wide ">LogOut</Link></li>
                             </>
                     }

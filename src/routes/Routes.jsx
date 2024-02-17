@@ -19,6 +19,7 @@ import ManageItems from "../pages/Dashboard/ManageItems/ManageItems";
 import Payment from "../pages/Dashboard/Payment/Payment";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
+import UpdateItem from "../pages/Dashboard/UpdateItem/UpdateItem";
 
 export const router = createBrowserRouter([
     {
@@ -103,6 +104,13 @@ export const router = createBrowserRouter([
             {
                 path: 'manageItems',
                 element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
+            },
+            {
+                path: 'updateItems/:id',
+                loader: async ({ params }) => {
+                    return fetch(`http://localhost:5000/menu/category/${params.id}`);
+                },
+                element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>
             }
         ]
     }

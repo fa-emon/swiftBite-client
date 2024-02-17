@@ -13,7 +13,6 @@ import { FaUsers } from "react-icons/fa";
 import { ImSpoonKnife } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiFillHome } from "react-icons/ai";
-import { BiSolidBookBookmark } from "react-icons/bi";
 import useOrder from "../hooks/useOrder";
 import useAdmin from "../hooks/useAdmin";
 
@@ -51,9 +50,6 @@ const Dashboard = () => {
                                 </li>
                                 <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
                                     <Link to={'/dashboard/manageItems'}><GiHamburgerMenu className="text-lg" />MANAGE ITEMS</Link>
-                                </li>
-                                <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
-                                    <Link to={'/dashboard/manageBookings'}><BiSolidBookBookmark className="text-lg" />MANAGE BOOKINGS</Link>
                                 </li>
                                 <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
                                     <Link to={'/dashboard/allusers'}><FaUsers className="text-lg" />ALL USERS</Link>

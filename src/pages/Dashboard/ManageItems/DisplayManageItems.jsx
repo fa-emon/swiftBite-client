@@ -3,6 +3,7 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import useMenu from "../../../hooks/useMenu";
 import { LuPenSquare } from "react-icons/lu";
 import { MdDelete } from 'react-icons/md';
+import { Link } from "react-router-dom";
 
 
 const DisplayManageItems = ({ items }) => {
@@ -11,9 +12,6 @@ const DisplayManageItems = ({ items }) => {
     const [axiosSecure] = useAxiosSecure();
     const [, , refetch] = useMenu();
 
-    const handleUpdate = () => {
-
-    }
 
     const handleDelete = (id) => {
         console.log(id)
@@ -61,7 +59,7 @@ const DisplayManageItems = ({ items }) => {
                 ${price}
             </td>
             <th>
-                <LuPenSquare onClick={() => handleUpdate(_id)} className='text-xl hover:text-green-600'></LuPenSquare>
+                <Link to={`/dashboard/updateItems/${_id}`}><LuPenSquare className='text-xl hover:text-green-600'></LuPenSquare></Link>
             </th>
             <th>
                 <MdDelete onClick={() => handleDelete(_id)} className='text-xl hover:text-red-600'></MdDelete>
