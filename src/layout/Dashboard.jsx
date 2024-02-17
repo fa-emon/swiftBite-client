@@ -64,7 +64,7 @@ const Dashboard = () => {
                                     <Link><SlCalender className="text-lg" />RESERVATION</Link>
                                 </li>
                                 <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
-                                    <Link><IoWalletSharp className="text-lg" />PAYMENT HISTORY</Link>
+                                    <Link to={'/dashboard/paymentHistory'}><IoWalletSharp className="text-lg" />PAYMENT HISTORY</Link>
                                 </li>
                                 <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
                                     <Link to={'/dashboard/myOrder'}><FaShoppingCart className="text-lg" />MY ORDER<div className="badge bg-black hover:bg-[#C9AB81] text-white hover:text-black border-[#C9AB81]">+{order.length || 0}</div></Link>

@@ -3,9 +3,10 @@ import { useEffect, useState } from "react";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import useAuth from "../../../hooks/useAuth";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 
-const CheckoutForm = ({ price, order }) => {
+const CheckoutForm = ({ price, order, refetch }) => {
     const { user } = useAuth();
     const stripe = useStripe();
     const elements = useElements();
@@ -14,6 +15,7 @@ const CheckoutForm = ({ price, order }) => {
     const [clientSecret, setClientSecret] = useState("");
     const [processing, setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (price > 0) {
@@ -98,6 +100,8 @@ const CheckoutForm = ({ price, order }) => {
                             showConfirmButton: false,
                             timer: 1500
                         });
+                        refetch();
+                        navigate('/dashboard/paymentHistory');
                     }
                 })
         }

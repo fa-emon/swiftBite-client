@@ -7,7 +7,7 @@ import useOrder from "../../../hooks/useOrder";
 const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK);
 
 const Payment = () => {
-    const [order] = useOrder();
+    const [order, refetch] = useOrder();
     const total = order.reduce((sum, item) => sum + item.price, 0);
     const price = parseFloat(total.toFixed(2));
 
@@ -29,7 +29,7 @@ const Payment = () => {
                 />
             </div>
             <Elements stripe={stripePromise}>
-                <CheckoutForm order={order} price={price}></CheckoutForm>
+                <CheckoutForm order={order} refetch={refetch} price={price}></CheckoutForm>
             </Elements>
         </>
     );
