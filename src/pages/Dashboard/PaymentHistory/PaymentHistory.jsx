@@ -40,8 +40,8 @@ const PaymentHistory = () => {
                     <thead className="text-black">
                         <tr className="bg-[#C9AB81]">
                             <th>INDEX</th>
-                            <th>EMAIL</th>
-                            <th className="ps-4">TRANSACTION ID</th>
+                            <th className="text-center">EMAIL</th>
+                            <th className="text-center">TRANSACTION ID</th>
                             <th className="text-center">STATUS</th>
                             <th className="text-center">PRICE</th>
                             <th className="text-center">DATE</th>
