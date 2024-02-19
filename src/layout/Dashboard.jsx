@@ -61,7 +61,7 @@ const Dashboard = () => {
                                     <Link to={'/dashboard/userHome'}><IoHome className="text-lg" />USER HOME</Link>
                                 </li>
                                 <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
-                                    <Link><SlCalender className="text-lg" />RESERVATION</Link>
+                                    <Link to={'/dashboard/reservation'}><SlCalender className="text-lg" />RESERVATION</Link>
                                 </li>
                                 <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
                                     <Link to={'/dashboard/paymentHistory'}><IoWalletSharp className="text-lg" />PAYMENT HISTORY</Link>
@@ -70,7 +70,7 @@ const Dashboard = () => {
                                     <Link to={'/dashboard/myOrder'}><FaShoppingCart className="text-lg" />MY ORDER<div className="badge bg-black hover:bg-[#C9AB81] text-white hover:text-black border-[#C9AB81]">+{order.length || 0}</div></Link>
                                 </li>
                                 <li className="bg-[#C9AB81] hover:bg-black text-black hover:text-white rounded-md">
-                                    <Link><FaSwatchbook className="text-lg" />MY BOOKING HISTORY</Link>
+                                    <Link to={'/dashboard/bookingHistory'}><FaSwatchbook className="text-lg" />MY BOOKING HISTORY</Link>
                                 </li>
                             </>
                     }
