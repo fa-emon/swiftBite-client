@@ -12,9 +12,14 @@ const MyOrder = () => {
             <div className="text-[#C9AB81] flex justify-between w-full my-4 heading-font tracking-wide ">
                 <h2>TOTAL ORDER : {order.length}</h2>
                 <h2>TOTAL PRICE : ${total.toFixed(2)}</h2>
-                <Link to={'/dashboard/payment'}>
-                    <button className="btn btn-sm bg-[#C9AB81] border-black tracking-wider">PAY</button>
-                </Link>
+                {
+                    total > 0 ?
+                        <Link to={'/dashboard/payment'}>
+                            <button className="btn btn-sm bg-[#C9AB81] border-black tracking-wider">PAY</button>
+                        </Link>
+                        :
+                        <button disabled className="btn btn-sm bg-[#C9AB81] border-black tracking-wider">PAY</button>
+                }
             </div>
             <div className="overflow-x-auto text-white mt-6 w-full bg-[] rounded-md">
                 <table className="table heading-font tracking-widest">
